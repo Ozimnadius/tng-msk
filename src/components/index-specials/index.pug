@@ -1,0 +1,40 @@
+.index-specials
+    .index-specials__title.ui-h2 Cпециальные Предложения
+    .index-specials__slider
+        .index-specials__nav
+            .index-specials__nav-item
+                button(type='button').index-specials__prev.ui-arrow-left
+            .index-specials__nav-item
+                button(type='button').index-specials__next.ui-arrow-right
+        .index-specials__swiper.swiper
+            .swiper-wrapper
+                -
+                    var data = [
+                        {
+                            img: '/images/content/index-specials/1.webp',
+                            title: 'Карта лояльности',
+                            desc: 'При первом посещении получите карту лояльности'
+                        },
+                        {
+                            img: '/images/content/index-specials/2.webp',
+                            title: 'Скидка в день рождения',
+                            desc: 'Отмечайте день рождения в «Tangiers Lounge Pokrovka» и получите скидку в подарок'
+                        },
+                        {
+                            img: '/images/content/index-specials/1.webp',
+                            title: 'Карта лояльности',
+                            desc: 'При первом посещении получите карту лояльности'
+                        },
+                        {
+                            img: '/images/content/index-specials/2.webp',
+                            title: 'Скидка в день рождения',
+                            desc: 'Отмечайте день рождения в «Tangiers Lounge Pokrovka» и получите скидку в подарок'
+                        },
+
+                    ];
+                each i in data
+                    .swiper-slide.index-specials__slide
+                        .index-specials__img
+                            img(src=i.img alt=i.title)
+                        .index-specials__name.ui-card-h1= i.title
+                        .index-specials__txt.ui-txt= i.desc

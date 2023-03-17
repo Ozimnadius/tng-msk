@@ -1,0 +1,28 @@
+.index-booking {
+  padding-top: 245px;
+  padding-bottom: 300px;
+  position: relative;
+  text-align: center;
+
+  &__words {
+    color: #181818;
+  }
+
+  &__wrap{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title{
+    margin-bottom: 30px;
+  }
+
+  &__sub{
+    max-width: 35ch;
+    margin-bottom: 30px;
+  }
+}

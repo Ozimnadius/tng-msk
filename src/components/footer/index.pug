@@ -1,0 +1,30 @@
+footer.footer
+    .container
+            .footer__top
+                .footer__logo
+                    a(href="#")
+                        img(src="/images/content/logo.svg" alt="lorem")
+                    p.ui-txt Tangiers Lounge Pokrovka — место для всех, кто ищет нетривиальный ресторан, готов оценить авторские находки миксологов и погрузиться в атмосферу модного заведения для особенных гостей.
+                .footer__menu
+                    .footer-menu
+                        each i in GLOBALS.menu
+                            a(href=i.href).footer-menu__item.ui-link.ui-txt= i.name
+                .footer__contacts
+                    .footer__contact.ui-txt
+                        a(href="/contacts/").ui-link= GLOBALS.addr
+                    .footer__contact.ui-txt!=GLOBALS.workTime
+                    .footer__contact.ui-txt
+                        a(href=GLOBALS.tel.href).ui-link= GLOBALS.tel.val
+                .footer__btns
+                    .footer__btn
+                        button(type='button').ui-btn-small Как добраться
+                    .footer__btn
+                        button(type='button').ui-btn-fill Программа лояльности
+
+            .footer__bottom
+                .footer__copy © 2023 Tangiers Lounge Pokrovka
+                .footer__policy
+                    button(type='button').ui-txt-link1.ui-link Политика конфиденциальности
+                .footer__socials
+                    a(href="#").ui-link.ui-txt Вконтакте
+                    a(href="#").ui-link.ui-txt Телеграм

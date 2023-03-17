@@ -1,0 +1,30 @@
+.index-interior
+    .index-interior__title.ui-h2 Интерьер
+    .index-interior__subtitle.ui-sub4 сочетает в себе англИйскую классику и гранж
+    .index-interior__banner
+        span.ui-h3 Основной зал
+        img(src="/images/content/index-interior/img-1.webp" alt="Интерьер")
+    .index-interior__bottom
+        .index-interior__title-2.ui-sub2 Концепция заведения тесно связана с легендой о Мистере Т. — загадочном хозяине Особняка.
+        .index-interior__grid
+            .index-interior__left
+                .index-interior__slider
+                    .index-interior__swiper.swiper
+                        .swiper-wrapper
+                            each i,x in [1,2,3,4,5]
+                                .swiper-slide.index-interior__slide
+                                    .index-interior__slide-img
+                                        img(src="/images/content/index-interior/img-2.webp" alt="lorem")
+                                    .index-interior__slide-count
+                                        span.ui-num2=(x+1)
+                                        span.ui-num3 &nbsp;/&nbsp;
+                                        span.ui-num3 5
+                                    .index-interior__slide-txt.ui-txt По возвращении, увидев разрушенные и обгоревшие стены от большого пожара, Мистер Т., недолго думая, оставляет всё как есть. Он покупает лишь новую мебель и открывает Tangiers Lounge уже в привычном для нас виде.
+                    .index-interior__nav
+                        button(type='button').index-interior__prev.ui-arrow-left
+                        button(type='button').index-interior__next.ui-arrow-right
+            .index-interior__right
+                .index-interior__desc
+                    h4.ui-sub4 Десятки лет назад Мистер Т. был вынужден покинуть свой Особняк. Он заколачивает ставни, запирает двери на сотни замков и покидает поместье.
+                    p.ui-txt Время не жалеет никого и ничего, внутренние убранства за столь долгий период потеряли прежний лоск, но не стали менее притягательными.
+                    img(src="/images/content/index-interior/img-3.webp" alt="lorem")

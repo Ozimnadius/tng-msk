@@ -1,0 +1,156 @@
+extends src/core/main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.index
+        //-BANNER
+        section.index__section
+            .grid
+                .grid__items
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                .grid__content
+                    include src/components/index-banner/index
+        //-DESC
+        section.index__section
+            .grid
+                .grid__items
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                .grid__content
+                    include src/components/index-desc/index
+        //-ADVANTAGES
+        section.index__section
+            include src/components/index-advantages/index
+        //-CATALOG
+        section.index__section.border-bottom
+            .grid
+                .grid__items
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                .grid__content
+                    include src/components/index-catalog/index
+        //-INTERIOR
+        section.index__section.border-bottom
+            .grid
+                .grid__items
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                .grid__content
+                    include src/components/index-interior/index
+        //-GALLERY
+        section.index__section.border-bottom
+            .grid
+                .grid__items
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                .grid__content
+                    include src/components/index-gallery/index
+        //-SPECIALS
+        section.index__section.border-bottom
+            .grid
+                .grid__items
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                .grid__content
+                    include src/components/index-specials/index
+        //-TEAM
+        section.index__section.border-bottom
+            .grid
+                .grid__items
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                .grid__content
+                    include src/components/index-team/index
+        //-BOOKING
+        section.index__section.border-bottom
+            .grid
+                .grid__items
+                    .grid__item.active
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item
+                    .grid__item.active
+                    .grid__item
+                .grid__content
+                    include src/components/index-booking/index
+
+

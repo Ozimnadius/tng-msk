@@ -1,0 +1,35 @@
+.index-gallery
+    -
+        var data = [
+            {
+                title: 'барная стойка',
+                img: '/images/content/index-gallery/1.webp',
+                count: '12',
+                desc: 'Контактная барная стойка позволит скрасить вечер увлекательной беседой с мастерами Особняка, а также окунуться в процесс кальянной и барной миксологии.'
+            },
+            {
+                title: 'Каминный зал',
+                img: '/images/content/index-gallery/2.webp',
+                count: '9',
+                desc: 'Небольшой уютный зал на втором этаже Tangiers Lounge. Здесь Мистер Т. предпочитал принимать особенных гостей и людей близких сердцу.'
+            },
+            {
+                title: 'VIP-комната',
+                img: '/images/content/index-gallery/3.webp',
+                count: '14',
+                desc: 'Небольшой уютный зал на втором этаже Tangiers Lounge. Здесь Мистер Т. предпочитал принимать особенных гостей и людей близких сердцу.'
+            },
+        ];
+    each i in data
+        .index-gallery__item
+            .index-gallery__title.ui-card-h1= i.title
+            .index-gallery__img
+                .index-gallery__blur
+                    img(src=i.img alt=i.title)
+                .index-gallery__pic
+                    img(src=i.img alt=i.title)
+                .index-gallery__count
+                    .index-gallery__count-name фото:
+                    .index-gallery__count-val.ui-num2= i.count
+                .index-gallery__arrow.ui-arrow-right
+            .index-gallery__desc.ui-txt= i.desc
