@@ -171,6 +171,10 @@ h6 {
   overflow: hidden;
 }
 
+.fancybox-slide:before {
+  display: none;
+}
+
 .ui {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -766,6 +770,9 @@ h6 {
   border-color: transparent transparent transparent currentColor;
 }
 
+.index__section {
+  overflow: hidden;
+}
 @media screen and (max-width: 767.98px) {
   .index__banner .grid__item:nth-child(1) {
     border-right: 1px solid var(--color-grey);
@@ -2561,6 +2568,12 @@ h6 {
     padding-bottom: 100px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .catalog__right {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 .catalog-menu {
   color: var(--color-grey);
@@ -2665,9 +2678,9 @@ h6 {
 }
 @media screen and (max-width: 767.98px) {
   .catalog-items {
-    -ms-grid-columns: 1fr 16px 1fr;
+    -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 15px;
   }
 }
 
@@ -3366,6 +3379,12 @@ h6 {
   position: relative;
   text-align: center;
 }
+@media screen and (max-width: 767.98px) {
+  .menu-catalog__section {
+    padding-left: 60px;
+    text-align: left;
+  }
+}
 .menu-catalog__back {
   position: absolute;
   top: 0;
@@ -3395,6 +3414,11 @@ h6 {
   .menu-catalog__back svg {
     width: 30px;
     height: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .menu-catalog__section-link {
+    font-size: 28px;
   }
 }
 .menu-catalog__list {
@@ -3657,6 +3681,7 @@ h6 {
   padding: 0 0 40px;
   width: 495px;
   color: var(--color-white);
+  display: block;
 }
 @media screen and (max-width: 1023.98px) {
   .detail {

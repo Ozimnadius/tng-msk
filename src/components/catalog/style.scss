@@ -55,6 +55,10 @@
       border: none;
       padding-bottom: 100px;
     }
+    @include sm-block{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
 

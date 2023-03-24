@@ -5,8 +5,8 @@
                 img(src="/images/content/logo.svg" alt="lorem")
             button(type='button' data-event='click.closeMenuCatalog').menu-catalog__close
                 <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="7" y="6" width="45" height="2" transform="rotate(45 7 6)" fill="#DFDFDF"/>
-                <rect x="6" y="38" width="45" height="2" transform="rotate(-45 6 38)" fill="#DFDFDF"/>
+                <rect x="7" y="6" width="45" height="2" transform="rotate(45 7 6)" fill="/catalog/DFDFDF"/>
+                <rect x="6" y="38" width="45" height="2" transform="rotate(-45 6 38)" fill="/catalog/DFDFDF"/>
                 </svg>
         .menu-catalog__section
             button(type='button' data-event='click.closeMenuCatalog').menu-catalog__back
@@ -27,10 +27,10 @@
                 ];
             .menu-catalog__item
                 .menu-catalog__link.active
-                    a(href="#") Авторская кухня
+                    a(href="/catalog/") Авторская кухня
                     button(type='button' data-event='click.nextMenuCatalog').menu-catalog__arr
                         <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="#454545"/>
+                        <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="/catalog/454545"/>
                         </svg>
                 .menu-catalog__submenu
                     .menu-catalog__wrap
@@ -39,8 +39,8 @@
                                 img(src="/images/content/logo.svg" alt="lorem")
                             button(type='button' data-event='click.closeMenuCatalog').menu-catalog__close
                                 <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="7" y="6" width="45" height="2" transform="rotate(45 7 6)" fill="#DFDFDF"/>
-                                <rect x="6" y="38" width="45" height="2" transform="rotate(-45 6 38)" fill="#DFDFDF"/>
+                                <rect x="7" y="6" width="45" height="2" transform="rotate(45 7 6)" fill="/catalog/DFDFDF"/>
+                                <rect x="6" y="38" width="45" height="2" transform="rotate(-45 6 38)" fill="/catalog/DFDFDF"/>
                                 </svg>
                         .menu-catalog__section
                             button(type='button' data-event='click.backMenuCatalog').menu-catalog__back
@@ -50,23 +50,23 @@
                             a(href="/catalog/").menu-catalog__section-link Авторская кухня
                         .menu-catalog__list
                             .menu-catalog__subitem
-                                a(href="#").menu-catalog__sublink.active Завтраки
+                                a(href="/catalog/").menu-catalog__sublink.active Завтраки
                             each i in subitems
                                 .menu-catalog__subitem
-                                    a(href="#").menu-catalog__sublink= i
+                                    a(href="/catalog/").menu-catalog__sublink= i
                         .menu-catalog__bottom
                             .menu-catalog__contacts
                                 a(href=GLOBALS.tel.href).menu-catalog__contact= GLOBALS.tel.val
                                 .menu-catalog__contact!=GLOBALS.workTime
                             .menu-catalog__socials
-                                a(href="#").menu-catalog__social Вконтакте
-                                a(href="#").menu-catalog__social Телеграм
+                                a(href="/catalog/").menu-catalog__social Вконтакте
+                                a(href="/catalog/").menu-catalog__social Телеграм
             .menu-catalog__item
                 .menu-catalog__link
-                    a(href="#") Дымное меню
+                    a(href="/catalog/") Дымное меню
                     button(type='button' data-event='click.nextMenuCatalog').menu-catalog__arr
                         <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="#454545"/>
+                        <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="/catalog/454545"/>
                         </svg>
                 .menu-catalog__submenu
                     .menu-catalog__wrap
@@ -75,8 +75,8 @@
                                 img(src="/images/content/logo.svg" alt="lorem")
                             button(type='button' data-event='click.closeMenuCatalog').menu-catalog__close
                                 <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="7" y="6" width="45" height="2" transform="rotate(45 7 6)" fill="#DFDFDF"/>
-                                <rect x="6" y="38" width="45" height="2" transform="rotate(-45 6 38)" fill="#DFDFDF"/>
+                                <rect x="7" y="6" width="45" height="2" transform="rotate(45 7 6)" fill="/catalog/DFDFDF"/>
+                                <rect x="6" y="38" width="45" height="2" transform="rotate(-45 6 38)" fill="/catalog/DFDFDF"/>
                                 </svg>
                         .menu-catalog__section
                             button(type='button' data-event='click.backMenuCatalog').menu-catalog__back
@@ -87,20 +87,20 @@
                         .menu-catalog__list
                             each i in subitems
                                 .menu-catalog__subitem
-                                    a(href="#").menu-catalog__sublink= i
+                                    a(href="/catalog/").menu-catalog__sublink= i
                         .menu-catalog__bottom
                             .menu-catalog__contacts
                                 a(href=GLOBALS.tel.href).menu-catalog__contact= GLOBALS.tel.val
                                 .menu-catalog__contact!=GLOBALS.workTime
                             .menu-catalog__socials
-                                a(href="#").menu-catalog__social Вконтакте
-                                a(href="#").menu-catalog__social Телеграм
+                                a(href="/catalog/").menu-catalog__social Вконтакте
+                                a(href="/catalog/").menu-catalog__social Телеграм
             .menu-catalog__item
                 .menu-catalog__link
-                    a(href="#") Барная карта
+                    a(href="/catalog/") Барная карта
                     button(type='button' data-event='click.nextMenuCatalog').menu-catalog__arr
                         <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="#454545"/>
+                        <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="/catalog/454545"/>
                         </svg>
                 .menu-catalog__submenu
                     .menu-catalog__wrap
@@ -109,8 +109,8 @@
                                 img(src="/images/content/logo.svg" alt="lorem")
                             button(type='button' data-event='click.closeMenuCatalog').menu-catalog__close
                                 <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="7" y="6" width="45" height="2" transform="rotate(45 7 6)" fill="#DFDFDF"/>
-                                <rect x="6" y="38" width="45" height="2" transform="rotate(-45 6 38)" fill="#DFDFDF"/>
+                                <rect x="7" y="6" width="45" height="2" transform="rotate(45 7 6)" fill="/catalog/DFDFDF"/>
+                                <rect x="6" y="38" width="45" height="2" transform="rotate(-45 6 38)" fill="/catalog/DFDFDF"/>
                                 </svg>
                         .menu-catalog__section
                             button(type='button' data-event='click.backMenuCatalog').menu-catalog__back
@@ -121,18 +121,18 @@
                         .menu-catalog__list
                             each i in subitems
                                 .menu-catalog__subitem
-                                    a(href="#").menu-catalog__sublink= i
+                                    a(href="/catalog/").menu-catalog__sublink= i
                         .menu-catalog__bottom
                             .menu-catalog__contacts
                                 a(href=GLOBALS.tel.href).menu-catalog__contact= GLOBALS.tel.val
                                 .menu-catalog__contact!=GLOBALS.workTime
                             .menu-catalog__socials
-                                a(href="#").menu-catalog__social Вконтакте
-                                a(href="#").menu-catalog__social Телеграм
+                                a(href="/catalog/").menu-catalog__social Вконтакте
+                                a(href="/catalog/").menu-catalog__social Телеграм
         .menu-catalog__bottom
             .menu-catalog__contacts
                 a(href=GLOBALS.tel.href).menu-catalog__contact= GLOBALS.tel.val
                 .menu-catalog__contact!=GLOBALS.workTime
             .menu-catalog__socials
-                a(href="#").menu-catalog__social Вконтакте
-                a(href="#").menu-catalog__social Телеграм
+                a(href="/catalog/").menu-catalog__social Вконтакте
+                a(href="/catalog/").menu-catalog__social Телеграм

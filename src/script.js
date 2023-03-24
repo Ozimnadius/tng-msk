@@ -287,7 +287,7 @@ class Events {
     }
 
     openMenuCatalog(e, elem) {
-        if (window.matchMedia('(max-width: 1023.98px)').matches) {
+        if (window.matchMedia('(max-width: 1439.98px)').matches) {
             e.preventDefault();
             this.$menuCatalog.classList.add('active');
             disableScroll();

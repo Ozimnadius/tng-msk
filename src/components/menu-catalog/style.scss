@@ -42,6 +42,10 @@
     padding: 25px 0;
     position: relative;
     text-align: center;
+    @include sm-block{
+      padding-left: 60px;
+      text-align: left;
+    }
   }
 
   &__back{
@@ -70,6 +74,9 @@
 
   &__section-link{
     @extend .ui-h2;
+    @include sm-block{
+      font-size: 28px;
+    }
   }
 
   &__list{
