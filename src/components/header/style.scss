@@ -9,6 +9,22 @@
   top: 0;
   left: 0;
   width: 100%;
+  @include sm-block{
+    padding: 10px 0;
+  }
+
+
+  &--menu {
+    border: none;
+    backdrop-filter: none;
+    background: none;
+    position: static;
+
+    .header__btn-menu {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 
   %item {
     line-height: 110%;
@@ -17,6 +33,9 @@
     min-height: 34px;
     display: flex;
     align-items: center;
+    @include sm-block {
+      padding: 0 15px;
+    }
 
     a, button {
       transition: var(--transition);
@@ -51,36 +70,113 @@
   &__name,
   &__tel,
   &__map {
-    @extend %item-border;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      background-color: var(--color-grey);
+      @include sm-block {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    order: 1;
+  }
+
+  &__name {
+    order: 2;
+    @include sm-block {
+      display: none;
+    }
+
+    &:after {
+      @include md-block {
+        display: none;
+      }
+    }
+  }
+
+  &__addr {
+    order: 3;
+    @include lg-block {
+      display: none;
+    }
   }
 
   &__btn-menu {
+    cursor: pointer;
     margin: 0 auto;
+    order: 4;
+    @include sm-block{
+      margin-right: 0;
+    }
 
-    button{
+    button {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 8px;
       min-height: 100%;
+      @include sm-block{
+          gap: 4px;
+      }
 
-      &:before,&:after{
+      &:before, &:after {
         content: '';
         display: block;
         width: 45px;
         height: 2px;
         background-color: var(--color-txt);
+        @include sm-block{
+          width: 24px;
+        }
       }
     }
   }
 
-  &__call{
-    a{
+  &__tel {
+    order: 5;
+    @include md-block {
+      display: none;
+    }
+  }
+
+  &__map {
+    order: 6;
+    @include lg-block {
+      order: 3;
+    }
+    @include md-block {
+      display: none;
+    }
+
+    &:after {
+      @include lg-block {
+        display: none;
+      }
+    }
+  }
+
+  &__call {
+    order: 7;
+    @include sm-block {
+      display: none;
+    }
+
+    a {
       display: flex;
       align-items: center;
       gap: 8px;
 
-      &:after{
+      &:after {
         content: '';
         display: block;
         width: 0;

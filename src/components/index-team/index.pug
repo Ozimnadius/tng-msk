@@ -3,15 +3,13 @@
     .index-team__slider
         .index-team__top
             .index-team__sub.ui-sub3 только профессионалы
-            .index-team__nav.index-specials__nav
-                .index-specials__nav-item
-                    button(type='button').index-team__prev.ui-arrow-left
-                .index-specials__nav-item
-                    button(type='button').index-team__next.ui-arrow-right
+            .index-team__nav
+                button(type='button').index-team__prev.ui-arrow-left
+                button(type='button').index-team__next.ui-arrow-right
         .index-team__swiper.swiper
             .swiper-wrapper
                 each i in [1,2,3,1,2,3]
-                    .swiper-slide.index-team__slide
+                    div(data-event='click.popupOpen').swiper-slide.index-team__slide
                         .index-team__img
                             .index-team__blur
                                 img(src="/images/content/index-team/" + i + ".webp" alt="Сергей Гаврилов")
@@ -19,3 +17,5 @@
                                 img(src="/images/content/index-team/" + i + ".webp" alt="Сергей Гаврилов")
                         .index-team__name.ui-card-h2 Сергей Гаврилов
                         .index-team__prof.ui-txt Генеральный директор
+                        template
+                            include ../new/index

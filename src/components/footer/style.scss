@@ -7,7 +7,28 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 'logo logo menu contacts btns btns';
-    gap: 20px;
+    gap: 60px 20px;
+    margin-bottom: 340px;
+    @include xlg-block {
+      grid-template-areas: 'logo logo menu contacts contacts btns';
+    }
+    @include lg-block {
+      grid-template-areas: 'logo logo logo menu contacts contacts'
+                            'btns btns . . . .';
+      margin-bottom: 180px;
+    }
+    @include md-block {
+      grid-template-areas: 'logo logo logo contacts contacts contacts'
+                            'btns btns btns menu menu menu';
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-template-areas: 'logo'
+                          'menu'
+                          'btns'
+                          'contacts';
+      margin-bottom: 80px;
+    }
   }
 
   &__logo {
@@ -17,6 +38,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
+    @include md-block {
+      margin-top: 0;
+    }
 
     img {
       width: 236px;
@@ -24,27 +48,67 @@
 
     p {
       width: 26ch;
+      @include lg-block {
+        font-size: 20px;
+      }
+      @include sm-block {
+        font-size: 16px;
+        width: 100%;
+      }
     }
   }
 
   &__menu {
     grid-area: menu;
+    @include md-block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__menu-items {
+    &:nth-child(2) {
+      display: none;
+      @include md-block {
+        display: block;
+      }
+    }
   }
 
   &__contacts {
     grid-area: contacts;
+    margin: -8px 0;
+    @include sm-block {
+      text-align: center;
+    }
   }
 
   &__contact {
-    padding: 12px 0;
+    padding: 8px 0;
     color: var(--color-txt);
+    @include lg-block {
+      font-size: 20px;
+    }
   }
 
   &__btns {
+    align-self: flex-start;
     grid-area: btns;
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: flex-end;
     gap: 20px;
+    @include lg-block {
+      justify-content: flex-start;
+    }
+    @include sm-block {
+      justify-content: center;
+    }
   }
 
   &__bottom {
@@ -53,14 +117,44 @@
     grid-template-areas: 'copy copy copy policy socials socials';
     gap: 20px;
     align-items: center;
+    @include xlg-block {
+      grid-template-areas: 'copy copy copy policy policy socials';
+    }
+    @include lg-block {
+      grid-template-areas: 'copy copy policy policy socials socials';
+    }
+    @include md-block {
+      grid-template-areas: 'copy copy copy policy policy policy';
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-template-areas: 'policy'
+                          'copy';
+      gap: 10px;
+    }
   }
 
   &__copy {
     grid-area: copy;
+    @include xlg-block {
+      font-size: 20px;
+    }
+    @include sm-block {
+      text-align: center;
+    }
   }
 
   &__policy {
     grid-area: policy;
+    @include lg-block {
+      text-align: center;
+    }
+    @include md-block {
+      text-align: right;
+    }
+    @include sm-block {
+      text-align: center;
+    }
 
     button {
       text-align: left;
@@ -73,9 +167,15 @@
     display: flex;
     justify-content: flex-end;
     gap: 30px;
+    @include md-block {
+      display: none;
+    }
 
-    a{
+    a {
       color: var(--color-txt);
+      @include lg-block {
+        font-size: 20px;
+      }
     }
   }
 
@@ -84,9 +184,15 @@
 .footer-menu {
   display: flex;
   flex-direction: column;
+  @include md-block {
+    margin: -12px 0;
+  }
 
   &__item {
     color: var(--color-txt);
     padding: 12px 0;
+    @include lg-block {
+      font-size: 20px;
+    }
   }
 }

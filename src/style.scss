@@ -9,7 +9,10 @@
 //COMPONENTS
 @import "components/ui/style";
 @import "components/grid/style";
+
 @import "components/header/style";
+
+@import "components/index/style";
 @import "components/index-banner/style";
 @import "components/index-desc/style";
 @import "components/index-advantages/style";
@@ -20,7 +23,25 @@
 @import "components/index-team/style";
 @import "components/index-booking/style";
 
+@import "components/contacts/style";
 
+@import "components/catalog/style";
+@import "components/catalog-menu/style";
+@import "components/catalog-items/style";
+
+@import "components/news/style";
+@import "components/new/style";
+
+@import "components/menu/style";
+@import "components/menu-catalog/style";
+
+@import "components/popup/style";
+
+@import "components/detail/style";
+
+@import "components/gallery/style";
+
+@import "components/special/style";
 
 
 @import "components/footer/style";

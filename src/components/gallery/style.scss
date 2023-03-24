@@ -1,0 +1,170 @@
+@use "sass:math";
+
+.gallery {
+  --btnSize: 48px;
+
+  .index-interior {
+    padding: 85px 0;
+    @include md-block {
+      padding: 75px 0;
+    }
+
+    &__title {
+      font-size: 48px;
+      margin-bottom: 20px;
+      @include md-block {
+        font-size: 34px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      margin-bottom: 30px;
+      @include md-block {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__banner {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 75px;
+      @include md-block {
+        margin-bottom: 35px;
+      }
+
+      &:before {
+        padding-top: math.percentage(300/375);
+      }
+
+      span {
+        font-size: 44px;
+        left: 115px;
+        bottom: 35px;
+        @include md-block {
+          font-size: 24px;
+          left: 15px;
+          bottom: 25px;
+        }
+      }
+    }
+
+    &__bottom {
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 60px;
+      @include md-block {
+        padding: 0 15px;
+      }
+    }
+
+    &__title-2 {
+      font-size: 44px;
+      margin-bottom: 50px;
+      margin-left: 60px;
+      @include md-block {
+        font-size: 24px;
+        margin-left: 0;
+        margin-bottom: 50px;
+      }
+    }
+
+    &__grid {
+      @include md-block {
+        grid-template-columns: 100%;
+        gap: 45px;
+      }
+    }
+
+    &__left {
+      @include md-block {
+        order: 1;
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+    }
+
+    &__col {
+      padding: 0 60px;
+      @include md-block {
+        padding: 0;
+      }
+    }
+
+    &__swiper{
+      @include md-block{
+        padding: 0 15px;
+      }
+    }
+
+    &__slide{
+      @include md-block{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__slide-img {
+      @include md-block{
+        width: math.percentage(20/24);
+        align-self: center;
+      }
+    }
+
+    &__slide-count {
+      margin-bottom: 6px;
+    }
+
+    &__nav {
+      @include md-block{
+        position: static;
+        order: -1;
+        margin-bottom: 20px;
+        width: math.percentage(18/24);
+      }
+
+      &:before {
+        @include md-block{
+          display: none;
+        }
+      }
+
+      button {
+        @include md-block{
+          position: static;
+          transform: none;
+        }
+      }
+    }
+
+    &__desc {
+
+      .ui-sub4 {
+        font-size: 20px;
+        @include md-block{
+          font-size: 16px;
+        }
+      }
+
+      .ui-txt {
+        font-size: 16px;
+      }
+
+      img {
+        @include md-block {
+          order: -1;
+        }
+      }
+    }
+  }
+
+  .ui-num2 {
+    font-size: 46px;
+  }
+
+  .ui-num3 {
+    font-size: 31px;
+  }
+
+}

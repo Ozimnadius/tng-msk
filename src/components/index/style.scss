@@ -1,0 +1,197 @@
+.index {
+
+  &__section{
+    //overflow: hidden;
+  }
+
+  &__banner {
+
+    .grid__item {
+      &:nth-child(1) {
+        @include sm-block {
+          border-right: 1px solid var(--color-grey);
+        }
+      }
+
+      &:nth-child(4) {
+        @include sm-block {
+          border-right: 1px solid transparent;
+        }
+      }
+
+      &:nth-child(20) {
+        @include sm-block {
+          border-right: 1px solid transparent;
+        }
+      }
+
+      &:nth-child(23) {
+        @include sm-block {
+          border-right: 1px solid var(--color-grey);
+        }
+      }
+    }
+
+  }
+
+  &__desc {
+    overflow: hidden;
+
+    .grid__item {
+      &:nth-child(1) {
+        @include sm-block {
+          border-right: 1px solid var(--color-grey);
+        }
+      }
+
+      &:nth-child(4) {
+        @include sm-block {
+          border-right: 1px solid transparent;
+        }
+      }
+
+      &:nth-child(20) {
+        @include sm-block {
+          border-right: 1px solid transparent;
+        }
+      }
+
+      &:nth-child(23) {
+        @include sm-block {
+          border-right: 1px solid var(--color-grey);
+        }
+      }
+    }
+  }
+
+  &__catalog {
+    .grid__item {
+      &:nth-child(4) {
+        @include xlg-block {
+          border-right: 1px solid var(--color-grey);
+        }
+        @include sm-block {
+          border-right: 1px solid transparent;
+        }
+      }
+
+      &:nth-child(6) {
+        @include xlg-block {
+          border-right: 1px solid transparent;
+        }
+        @include sm-block {
+          border-right: 1px solid var(--color-grey);
+        }
+      }
+
+      &:nth-child(18) {
+        @include xlg-block {
+          border-right: 1px solid transparent;
+        }
+        @include sm-block {
+          border-right: 1px solid var(--color-grey);
+        }
+      }
+
+      &:nth-child(20) {
+        @include xlg-block {
+          border-right: 1px solid var(--color-grey);
+        }
+        @include sm-block {
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+  }
+
+  &__interior {
+    .grid__item {
+      @include sm-block {
+        &:nth-child(2),
+        &:nth-child(12),
+        &:nth-child(22) {
+          border-color: transparent;
+        }
+
+        &:nth-child(4),
+        &:nth-child(20) {
+          border-color: var(--color-grey);
+        }
+      }
+    }
+  }
+
+  &__gallery {
+    .grid__item {
+      @include sm-block {
+        &:nth-child(4),
+        &:nth-child(12),
+        &:nth-child(20) {
+          border-color: transparent;
+        }
+
+        &:nth-child(1),
+        &:nth-child(23) {
+          border-color: var(--color-grey);
+        }
+      }
+    }
+  }
+
+  &__specials {
+    .grid__item {
+      @include sm-block {
+        &:nth-child(6),
+        &:nth-child(18) {
+          border-color: transparent;
+        }
+        &:nth-child(12) {
+          border-color: var(--color-grey);
+        }
+      }
+    }
+  }
+
+  &__team {
+    .grid__item {
+      &:nth-child(4) {
+        @include xlg-block {
+          border-right: 1px solid var(--color-grey);
+        }
+      }
+
+      &:nth-child(6) {
+        @include xlg-block {
+          border-right: 1px solid transparent;
+        }
+      }
+
+      &:nth-child(18) {
+        @include xlg-block {
+          border-right: 1px solid transparent;
+        }
+      }
+
+      &:nth-child(20) {
+        @include xlg-block {
+          border-right: 1px solid var(--color-grey);
+        }
+      }
+    }
+  }
+
+  &__booking {
+    .grid__item {
+      @include sm-block {
+        &:nth-child(2),
+        &:nth-child(22) {
+          border-color: transparent;
+        }
+        &:nth-child(1),
+        &:nth-child(23) {
+          border-color: var(--color-grey);
+        }
+      }
+    }
+  }
+}

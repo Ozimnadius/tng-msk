@@ -1,0 +1,48 @@
+.catalog-menu
+    -
+        var subitems = [
+            'Топпинги',
+            'Холодные закуски',
+            'Закуски',
+            'Соусы',
+            'Салаты',
+            'Супы',
+            'Паста',
+        ];
+    .catalog-menu__item.open
+        .catalog-menu__link.active
+            a(href="#") Авторская кухня
+            button(type='button' data-event='click.toggleCatalogSubmenu').catalog-menu__arr
+                <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="#454545"/>
+                </svg>
+        .catalog-menu__submenu.open
+            .catalog-menu__subitem.active
+                a(href="#").catalog-menu__sublink Завтраки
+            each i in subitems
+                .catalog-menu__subitem
+                    a(href="#").catalog-menu__sublink= i
+    .catalog-menu__item
+        .catalog-menu__link
+            a(href="#") Дымное меню
+            button(type='button' data-event='click.toggleCatalogSubmenu').catalog-menu__arr
+                <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="#454545"/>
+                </svg>
+        .catalog-menu__submenu
+            each i in subitems
+                .catalog-menu__subitem
+                    a(href="#").catalog-menu__sublink= i
+    .catalog-menu__item
+        .catalog-menu__link
+            a(href="#") Барная карта
+            button(type='button' data-event='click.toggleCatalogSubmenu').catalog-menu__arr
+                <svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.0692 10.1172L14.5562 15.6301L9.03121 10.1172L7.33398 11.8144L14.5562 19.0366L21.7784 11.8144L20.0692 10.1172Z" fill="#454545"/>
+                </svg>
+        .catalog-menu__submenu
+            each i in subitems
+                .catalog-menu__subitem
+                    a(href="#").catalog-menu__sublink= i
+
+

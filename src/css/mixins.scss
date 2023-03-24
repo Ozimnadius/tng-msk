@@ -20,20 +20,24 @@ $break_xs: 575.98px;
 }
 
 @mixin content() {
+  @include headers;
+
   ul {
-    padding-left: 40px;
+    padding-left: 30px;
+    display: grid;
+    gap: 20px;
+    @include sm-block {
+      gap: 10px;
+    }
 
     li {
       list-style: disc;
     }
   }
 
-  @include headers;
-
-  h1, h2, h3, h4, h5, h6, p, ul, ol {
-    margin: 1em 0;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font2);
   }
-
 }
 
 @mixin headers() {
@@ -42,7 +46,12 @@ $break_xs: 575.98px;
   }
 
   h2 {
-    font-size: 2.2em;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    @include md-block {
+      font-size: 24px;
+    }
   }
 
   h3 {

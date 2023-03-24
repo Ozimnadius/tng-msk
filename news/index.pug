@@ -1,0 +1,32 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'События'
+
+block content
+    main.news
+        .grid
+            .grid__items
+                +gridItems([4,20])
+            .grid__content
+                .container.news__container
+                    .news__title.ui-h2 События
+                    .news__list
+                        each i in [1,2,3]
+                            div(data-event='click.popupOpen').news__item
+                                .news__date 26 января 2023
+                                .news__img
+                                    img(src="/images/content/news/"+i+".webp" alt="Открытие Tangiers Lounge Pokrovka")
+                                .news__name Открытие Tangiers Lounge Pokrovka
+                                .news__desc Дамы и господа, торжественно объявляем - техническое открытие Tangiers Lounge Pokrovka
+
+                                template
+                                    include ../src/components/new/index
+
+
+
+
+
+
+
+

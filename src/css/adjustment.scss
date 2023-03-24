@@ -35,4 +35,8 @@ body {
   @include content;
 }
 
+svg{
+  max-height: 100%;
+}
+
 @include headers;

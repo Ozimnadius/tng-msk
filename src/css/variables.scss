@@ -16,4 +16,12 @@
   --color-white: #FFFFFF;
 
   --transition: 0.4s;
+
+  --btnSize: 92px;
+  @media (max-width: 1439.98px){
+    --btnSize: 50px;
+  }
+  @media (max-width: 1023.98px){
+    --btnSize: 38px;
+  }
 }

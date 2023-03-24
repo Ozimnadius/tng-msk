@@ -1,8 +1,60 @@
 .index-banner {
   padding-top: 160px;
-  
+  @include xlg-block {
+    padding-top: 120px;
+  }
+  @include lg-block {
+    padding-top: 85px;
+  }
+  @include sm-block{
+    padding-top: 40px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 60px;
+    @include lg-block {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__addr {
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    display: none;
+    @include lg-block {
+      display: block;
+    }
+    @include sm-block{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img{
+    position: relative;
+
+    &:before{
+      @include md-block{
+        content: '';
+        display: block;
+        padding-top: calc(470/768*100%);
+      }
+      @include sm-block{
+        padding-top: calc(350/375*100%);
+      }
+    }
+
+    img{
+      @include md-block{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }

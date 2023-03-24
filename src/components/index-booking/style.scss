@@ -3,26 +3,58 @@
   padding-bottom: 300px;
   position: relative;
   text-align: center;
+  @include xlg-block {
+    padding: 200px 0;
+  }
+  @include lg-block {
+    padding: 130px 0;
+  }
+  @include md-block {
+    padding: 110px 0;
+  }
+  @include sm-block {
+    padding: 60px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 
   &__words {
     color: #181818;
+    @include sm-block {
+      order: 1;
+      color: var(--color-grey);
+    }
   }
 
-  &__wrap{
+  &__wrap {
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include sm-block {
+      position: static;
+    }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 30px;
+    @include sm-block {
+      margin-bottom: 16px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
 
-  &__sub{
+  &__sub {
     max-width: 35ch;
     margin-bottom: 30px;
+    @include sm-block {
+      font-size: 16px;
+      margin-bottom: 8px;
+      text-transform: none;
+    }
   }
 }

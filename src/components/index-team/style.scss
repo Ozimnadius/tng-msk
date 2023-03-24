@@ -1,17 +1,55 @@
-.index-team {
-  @extend .index-specials;
+@use "sass:math";
 
-  &__title{
+.index-team {
+  padding: 170px 0;
+  @include xlg-block {
+    padding: 150px 0;
+  }
+  @include lg-block {
+    padding: 130px 0;
+  }
+  @include sm-block {
+    padding: 50px 0;
+  }
+
+  &__title {
     text-align: center;
     margin-bottom: 30px;
+    @include xlg-block {
+      margin-bottom: 20px;
+    }
+
   }
 
-  &__top{
+  &__top {
     position: relative;
     z-index: 2;
+    @include sm-block{
+      margin-bottom: 25px;
+    }
+
   }
 
-  &__sub{
+  &__nav {
+    width: calc(math.percentage(6/12) + var(--btnSize));
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    @include xlg-block {
+      width: calc(math.percentage(8/12) + var(--btnSize));
+      margin-bottom: 30px;
+    }
+    @include md-block {
+      --btnSize: 50px;
+      margin-bottom: 55px;
+    }
+    @include sm-block {
+      --btnSize: 38px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__sub {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,15 +57,31 @@
     text-align: center;
     position: absolute;
     inset: 0;
+    @include lg-block {
+      font-size: 20px;
+    }
+    @include sm-block {
+      position: static;
+      margin-bottom: 38px;
+      font-size: 16px;
+    }
   }
 
-  &__swiper{
+  &__swiper {
     padding-top: 200px;
     padding-bottom: 200px;
     margin: -200px 0;
+    @include lg-block {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include sm-block {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
   }
 
-  &__slide{
+  &__slide {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,44 +89,55 @@
     box-sizing: border-box;
   }
 
-  &__img{
-    width: 480px;
+  &__img {
+    max-width: 480px;
+    width: 100%;
     margin-bottom: 40px;
     position: relative;
-    &:before{
+    @include xlg-block {
+      margin-bottom: 25px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(630/480*100%);
+      padding-top: calc(630 / 480 * 100%);
     }
   }
 
-  &__blur{
+  &__blur {
     position: absolute;
     z-index: 0;
     inset: 0;
     filter: blur(100px);
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  &__pic{
+  &__pic {
     position: absolute;
     z-index: 2;
     inset: 0;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  &__name{
+  &__name {
     margin-bottom: 10px;
+    @include lg-block {
+      font-size: 24px;
+      margin-bottom: 7px;
+    }
   }
 
 }

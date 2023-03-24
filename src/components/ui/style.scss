@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .ui {
   display: flex;
   flex-direction: column;
@@ -15,10 +17,10 @@
 .ui-title {
   font-weight: 400;
   font-size: 200px;
-  line-height: 91.5%;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-white);
+  line-height: 92%;
 
   @include lg-block {
     font-size: 120px;
@@ -34,8 +36,8 @@
 .ui-sub4,
 .ui-sub5 {
   font-weight: 400;
-  line-height: 100%;
   text-transform: uppercase;
+  line-height: 110%;
 }
 
 .ui-sub1 {
@@ -56,10 +58,16 @@
 
 .ui-sub3 {
   font-size: 34px;
+  @include lg-block{
+    font-size: 24px;
+  }
 }
 
 .ui-sub4 {
   font-size: 24px;
+  @include lg-block{
+    font-size: 20px;
+  }
   @include sm-block {
     font-size: 16px;
   }
@@ -76,8 +84,8 @@
 .ui-h4 {
   font-family: var(--font2);
   font-weight: 400;
-  line-height: 100%;
   text-transform: uppercase;
+  line-height: 110%;
 }
 
 .ui-h1 {
@@ -114,12 +122,14 @@
 .ui-card-h3 {
   font-family: var(--font2);
   font-weight: 400;
-  line-height: 137.5%;
   text-transform: uppercase;
 }
 
 .ui-card-h1 {
   font-size: 48px;
+  @include lg-block{
+    font-size: 34px;
+  }
 }
 
 .ui-card-h2 {
@@ -135,8 +145,8 @@
 .ui-num2,
 .ui-num3 {
   font-weight: 400;
-  line-height: 110%;
   text-transform: uppercase;
+  line-height: 110%;
 }
 
 .ui-num1 {
@@ -147,33 +157,43 @@
 .ui-num2 {
   font-family: var(--font2);
   font-size: 70px;
+  @include lg-block{
+    font-size: 46px;
+  }
 }
 
 .ui-num3 {
   font-family: var(--font2);
   font-size: 46px;
+
 }
 
 
 .ui-txt,
 .ui-txt-big {
   font-weight: 400;
-  line-height: 115%;
+  line-height: 142%;
 }
 
 .ui-txt{
   font-size: 20px;
+  @include lg-block{
+    font-size: 16px;
+  }
+  @include sm-block{
+    font-size: 16px;
+  }
 }
 
 .ui-txt-big{
   font-size: 25px;
+  text-transform: uppercase;
 }
 
 .ui-txt-link1,
 .ui-txt-link2 {
   font-family: var(--font);
   font-weight: 400;
-  line-height: 115%;
   text-decoration: underline;
 }
 
@@ -185,18 +205,9 @@
   font-size: 16px;
 }
 
-.ui-txt {
-  font-size: 20px;
-  line-height: 115%;
-}
-
-.ui-txt-big {
-  line-height: 142%;
-  text-transform: uppercase;
-}
-
 .ui-btn {
   font-family: var(--font);
+  white-space: nowrap;
   font-weight: 400;
   line-height: 110%;
   text-transform: uppercase;
@@ -257,8 +268,8 @@
 
 .ui-arrow{
   --arrowColor: var(--color-txt);
-  width: 92px;
-  height: 92px;
+  width: var(--btnSize);
+  height: var(--btnSize);
   background-color: transparent;
   transition: var(--transition);
   display: flex;
@@ -292,18 +303,18 @@
 .ui-arrow-left{
   @extend .ui-arrow;
   &:before{
-    border-width: 11px 28px 11px 0;
+    border-width: calc(var(--btnSize) * 0.12) calc(var(--btnSize) * 0.305) calc(var(--btnSize) * 0.12) 0;
     border-color: transparent var(--arrowColor) transparent transparent;
-    transform: translateX(-4px);
+    transform: translateX(calc(0px - var(--btnSize)*0.04));
   }
 }
 
 .ui-arrow-right{
   @extend .ui-arrow;
   &:before{
-    border-width: 11px 0 11px 28px;
+    border-width: calc(var(--btnSize) * 0.12) 0 calc(var(--btnSize) * 0.12) calc(var(--btnSize) * 0.305);
     border-color: transparent transparent transparent var(--arrowColor);
-    transform: translateX(4px);
+    transform: translateX(calc(0px + var(--btnSize)*0.04));
   }
 }
 

@@ -1,0 +1,32 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Контакты'
+
+
+block content
+    main.contacts
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&style=stylers.lightness:invert")
+        section.contacts__socials
+            a(href="#").contacts__social.ui-sub5.ui-link Вконтакте
+            a(href="#").contacts__social.ui-sub5.ui-link Телеграм
+        section.contacts__top
+            .grid
+                .grid__items
+                    +gridItems([4,20])
+                .grid__content
+                    .contacts__container.container
+                        .contacts__title.ui-h2 Контакты
+                        .contacts__name TANGIERS LOUNGE POKROVKA
+                        .contacts__time.ui-sub3 Пн - Чт: 12.00 — 00:00, Пт - Сб: 12.00 — 02.00
+                        .contacts__tel
+                            a(href=GLOBALS.tel.href).ui-num1= GLOBALS.tel.val
+                        .contacts__addr.ui-sub3= GLOBALS.addr
+                        a(href="#").contacts__btn.ui-btn-big ЗАБРОНИРОВАТЬ СТОЛИК
+
+        section.contacts__map
+            #map
+            button(type='button' data-event='click.templateOpen' data-name='how').contacts__how.ui-btn-fill как добраться
+
+
+

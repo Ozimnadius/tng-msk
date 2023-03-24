@@ -1,0 +1,21 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Каталог'
+
+block content
+    main.catalog
+        .catalog__left
+            .catalog__title.ui-h2 Меню
+            .catalog__menu
+                include ../src/components/catalog-menu/index
+        .catalog__right
+            .catalog__title.ui-h2 Завтраки
+            .catalog__item
+                include ../src/components/catalog-items/index
+
+
+
+
+
+

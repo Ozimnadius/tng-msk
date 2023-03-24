@@ -1,0 +1,48 @@
+.catalog-items
+    each i in [1,2,3,4,5,6,7,8,9]
+        div(data-event='click.detailOpen').catalog-items__item.catalog-item
+            .catalog-item__img
+                img(src="/images/content/catalog/img.webp" alt="Белковый омлет из пяти яиц")
+            .catalog-item__title Белковый омлет из пяти яиц
+            .catalog-item__prices
+                .catalog-item__price.ui-sub3 280 ₽
+                .catalog-item__oldprice 265 г
+            template
+                .detail
+                    button(type='button' data-event='click.detailClose').detail__close
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.90234" y="0.463867" width="44.6086" height="1.9826" transform="rotate(45 1.90234 0.463867)" fill="#DFDFDF"/>
+                        <rect x="0.910156" y="32.1855" width="44.6086" height="1.9826" transform="rotate(-45 0.910156 32.1855)" fill="#DFDFDF"/>
+                        </svg>
+                    .detail__img
+                        img(src="/images/content/catalog/img.webp" alt="lorem")
+                    .detail__name Белковый омлет из пяти яиц
+                    .detail__bottom
+                        .detail__chars
+                            -
+                                var data = [
+                                    {
+                                        name: 'Калорийность',
+                                        val: '842',
+                                    },
+                                    {
+                                        name: 'Белки',
+                                        val: '842',
+                                    },
+                                    {
+                                        name: 'Жиры',
+                                        val: '54',
+                                    },
+                                    {
+                                        name: 'Углеводы',
+                                        val: '56',
+                                    }
+                                ];
+                            each i in data
+                                .detail__char
+                                    .detail__char-name= i.name
+                                    .detail__char-val= i.val
+                        .detail__prices
+                            .detail__price 280 ₽
+                            .detail__oldprice 265 г
+

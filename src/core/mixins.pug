@@ -3,3 +3,8 @@ mixin image(imagePath='', imageClass='', imageAlt='img')
 
 mixin btn(cls='btn', href='/', attr='', name='Button')
     a(class=`${cls}`, href=`${href}`, #{${attr}})= name
+
+mixin gridItems(items)
+    each i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,191,20,21,22,23,24]
+        - var cls = (Array.isArray(items) && items.includes(i))?'active':'';
+        div(class=cls).grid__item

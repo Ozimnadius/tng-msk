@@ -1,0 +1,22 @@
+.gallery
+    .grid
+        .grid__items
+            +gridItems([12])
+        .grid__content
+            .gallery__content
+                include ../index-interior/index
+            script.
+                (function (){
+                    let galleryInteriorSlider = document.querySelector('.gallery .index-interior__slider');
+                    if (galleryInteriorSlider) {
+                        let galleryInteriorSwiper = new Swiper(galleryInteriorSlider.querySelector('.swiper'), {
+                            speed: 800,
+                            spaceBetween: 20,
+                            grabCursor: true,
+                            navigation: {
+                                nextEl: galleryInteriorSlider.querySelector('.index-interior__next'),
+                                prevEl: galleryInteriorSlider.querySelector('.index-interior__prev'),
+                            }
+                        });
+                    }
+                })();

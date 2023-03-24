@@ -2,73 +2,279 @@
 
 .index-interior {
   width: 100%;
-  max-width: 1760px;
-  padding: 200px 20px 300px 20px;
+  padding: 200px 0 300px 0;
   margin: 0 auto;
+  @include xlg-block {
+    padding: 150px 0;
+  }
+  @include lg-block {
+    padding: 100px 0;
+  }
+  @include md-block {
+    padding: 80px 0;
+  }
 
   &__title {
     text-align: center;
     margin-bottom: 45px;
+    @include xlg-block {
+      margin-bottom: 30px;
+    }
+    @include lg-block {
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      margin-bottom: 15px;
+    }
   }
 
   &__subtitle {
     text-align: center;
     margin-bottom: 45px;
-  }
-
-  &__banner {
-    margin-bottom: 135px;
-    position: relative;
-
-    span{
-      position: absolute;
-      left: 195px;
-      bottom: 55px;
+    @include lg-block {
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      max-width: 30ch;
+      width: 100%;
+      margin: 0 auto 30px;
     }
   }
 
-  &__bottom{
-    max-width: 1350px;
+  &__banner {
+    margin: 0 100px 135px;
+    position: relative;
+    @include xlg-block {
+      margin: 0 60px 95px;
+    }
+    @include lg-block {
+      margin: 0 20px 50px;
+    }
+    @include md-block {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @include sm-block {
+      margin-bottom: 35px;
+    }
+
+    &:before {
+      @include md-block {
+        content: '';
+        display: block;
+        padding-top: math.percentage(500/768);
+      }
+      @include sm-block {
+        padding-top: math.percentage(300/375);
+      }
+
+    }
+
+    span {
+      position: absolute;
+      z-index: 2;
+      left: 195px;
+      bottom: 55px;
+      @include xlg-block {
+        left: 60px;
+      }
+      @include lg-block {
+        left: 100px;
+      }
+      @include md-block {
+        left: 20px;
+      }
+      @include sm-block {
+        left: 15px;
+        bottom: 25px;
+      }
+    }
+
+    img {
+      width: 100%;
+      @include md-block {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__bottom {
+    width: math.percentage(10/12);
     margin: 0 auto;
+    @include sm-block {
+      width: math.percentage(22/24);
+    }
   }
 
   &__title-2 {
     max-width: 30ch;
     margin-bottom: 64px;
+    margin-left: 120px;
+    @include xlg-block {
+      margin-left: 74px;
+    }
+    @include lg-block {
+      margin-left: 40px;
+    }
+    @include md-block {
+      margin-left: 25px;
+      margin-bottom: 55px;
+    }
+    @include sm-block {
+      margin-left: 0;
+      font-size: 24px;
+    }
   }
 
   &__grid {
-    --gap: 230px;
-    display:grid;
-    grid-template-columns: repeat(2, calc((100% - var(--gap))/2));
-    gap: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 45px;
+    }
   }
 
-  &__slider{
+  &__left {
+    @include sm-block {
+      order: 1;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  &__col {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 120px;
+    @include xlg-block {
+      padding: 0 74px;
+    }
+    @include lg-block {
+      padding: 0 40px;
+    }
+    @include md-block {
+      padding: 0 25px;
+    }
+    @include sm-block {
+      padding: 0;
+    }
+  }
+
+  &__slider {
     position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  &__slide-img{
+  &__swiper{
+    @include sm-block{
+      padding: 0 15px;
+    }
+  }
+
+  &__slide{
+    @include sm-block{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__slide-img {
     margin-bottom: 20px;
+    @include sm-block{
+      width: math.percentage(20/24);
+      align-self: center;
+    }
   }
 
-  &__slide-count{
+  &__slide-count {
     margin-bottom: 20px;
+    text-align: center;
+
+    .ui-num2 {
+      @include lg-block {
+        font-size: 70px;
+      }
+    }
   }
 
-  &__nav{
+  &__nav {
     position: absolute;
-    inset: 0 -162px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    @include sm-block{
+      position: static;
+      order: -1;
+      margin-bottom: 20px;
+      width: math.percentage(18/24);
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: calc(740 / 795 * 100%);
+      @include xlg-block {
+        padding-top: calc(588 / 594 * 100%);
+      }
+      @include md-block {
+        padding-top: math.percentage(344/310);
+      }
+      @include sm-block{
+        display: none;
+      }
+    }
+
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    button {
+      pointer-events: all;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include sm-block{
+        position: static;
+        transform: none;
+      }
+    }
   }
 
-  &__desc{
+  &__prev {
+    left: calc(0px - var(--btnSize) / 2);
+  }
+
+  &__next {
+    right: calc(0px - var(--btnSize) / 2);
+  }
+
+  &__desc {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    h4 {
+      line-height: 142%;
+    }
+
+    img {
+      max-width: 268px;
+      align-self: center;
+      @include sm-block {
+        order: -1;
+      }
+    }
   }
 }

@@ -21,7 +21,7 @@
             },
         ];
     each i in data
-        .index-gallery__item
+        div(data-event='click.popupOpen').index-gallery__item
             .index-gallery__title.ui-card-h1= i.title
             .index-gallery__img
                 .index-gallery__blur
@@ -33,3 +33,5 @@
                     .index-gallery__count-val.ui-num2= i.count
                 .index-gallery__arrow.ui-arrow-right
             .index-gallery__desc.ui-txt= i.desc
+            template
+                include ../gallery/index

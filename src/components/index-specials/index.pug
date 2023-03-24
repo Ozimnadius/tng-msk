@@ -33,8 +33,10 @@
 
                     ];
                 each i in data
-                    .swiper-slide.index-specials__slide
+                    div(data-event='click.popupOpen').swiper-slide.index-specials__slide
                         .index-specials__img
                             img(src=i.img alt=i.title)
                         .index-specials__name.ui-card-h1= i.title
                         .index-specials__txt.ui-txt= i.desc
+                        template
+                            include ../special/index
