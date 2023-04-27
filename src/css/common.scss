@@ -11,6 +11,8 @@
 }
 
 .fancybox-slide:before{
-  display: none;
+  @include sm-block{
+    display: none;
+  }
 }
 

@@ -1,12 +1,30 @@
 .index-banner
-    .index-banner__title.ui-title.
-        TANGIERS <br>
-        LOUNGE <br>
-        POKROVKA
-    .index-banner__addr Москва, ул. Покровка, д.31 стр.4
-    .index-banner__img
-        picture
-            source(srcset="images/content/index-banner/img-mobile.webp" media='(max-width: 767.98px)')
-            source(srcset="images/content/index-banner/img-tablet.webp" media='(max-width: 1023.98px)')
-            source(srcset="/images/content/index-banner/img.webp" media='(max-width: 1919.98px)')
-            img(src="/images/content/index-banner/img.webp" alt='TANGIERS LOUNGE POKROVKA')
+    .container
+        .index-banner__title.
+            TANGIERS <br>
+            LOUNGE <br>
+            POKROVKA
+        .index-banner__sub забронируй свое вкусовое путешествие в таинственной атмосфере Особняка в центре москвы
+        .index-banner__items
+            -
+                var data = [
+                    {
+                        img: '/images/content/index-banner/1.webp',
+                        name: 'паназиатская<br>Авторская кухня'
+                    },
+                    {
+                        img: '/images/content/index-banner/2.webp',
+                        name: 'Ароматная дымная<br>терапия'
+                    },
+                    {
+                        img: '/images/content/index-banner/3.webp',
+                        name: 'Эксклюзивные находки<br>миксологов'
+                    }
+                ]
+            each i in data
+                .index-banner__item
+                    .index-banner__img
+                        img(src=i.img alt="lorem")
+                    .index-banner__name!=i.name
+
+        button(type='button' data-event="click.restoplaceBtn").index-banner__btn.ui-btn-big ЗАБРОНИРОВАТЬ СТОЛИК
