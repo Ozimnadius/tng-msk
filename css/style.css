@@ -779,7 +779,7 @@ h6 {
   overflow: hidden;
 }
 .index__banner {
-  background: url("/images/content/index-banner/bg.webp") center center no-repeat;
+  background: url("../images/content/index-banner/bg.webp") center center no-repeat;
   background-size: cover;
 }
 @media screen and (max-width: 767.98px) {
