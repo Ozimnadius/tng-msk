@@ -3301,21 +3301,34 @@ h6 {
 .catalog-sections__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
   grid-template-columns: repeat(4, 1fr);
   position: absolute;
   inset: 0;
+  gap: 65px 30px;
+}
+@media screen and (max-width: 1919.98px) {
+  .catalog-sections__grid {
+    gap: 20px 30px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .catalog-sections__grid {
+    gap: 30px 75px;
+  }
 }
 @media screen and (max-width: 1023.98px) {
   .catalog-sections__grid {
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: 1fr 45px 1fr 45px 1fr;
     grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
   }
 }
 @media screen and (max-width: 767.98px) {
   .catalog-sections__grid {
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px 15px;
   }
 }
 .catalog-sections__grid-item {

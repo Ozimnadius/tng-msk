@@ -28,11 +28,20 @@
     grid-template-columns: repeat(4, 1fr);
     position: absolute;
     inset: 0;
+    gap: 65px 30px;
+    @include xlg-block {
+      gap: 20px 30px;
+    }
+    @include lg-block {
+      gap: 30px 75px;
+    }
     @include md-block {
       grid-template-columns: repeat(3, 1fr);
+      gap: 45px;
     }
     @include sm-block {
       grid-template-columns: repeat(2, 1fr);
+      gap: 20px 15px;
     }
   }
 
