@@ -3783,6 +3783,17 @@ h6 {
     padding: 40px 10px;
   }
 }
+.article__back {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
 .article__title {
   text-align: center;
 }

@@ -1,14 +1,15 @@
 .article {
 
-  .grid{
-    &__item{
-      &:nth-child(1),&:nth-child(23){
-        @include md-block{
+  .grid {
+    &__item {
+      &:nth-child(1), &:nth-child(23) {
+        @include md-block {
           border-color: var(--color-grey);
         }
       }
-      &:nth-child(4),&:nth-child(20){
-        @include md-block{
+
+      &:nth-child(4), &:nth-child(20) {
+        @include md-block {
           border-color: transparent;
         }
       }
@@ -22,12 +23,20 @@
     align-items: center;
     gap: 40px;
     width: min(calc(16 / 24 * 100%), 100%);
-    @include md-block{
+    @include md-block {
       width: min(calc(22 / 24 * 100%), 100%);
     }
-    @include sm-block{
+    @include sm-block {
       padding: 40px 10px;
     }
+  }
+
+  &__back {
+    align-self: flex-start;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   &__title {
