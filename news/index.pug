@@ -13,7 +13,7 @@ block content
                     .news__title.ui-h2 События
                     .news__list
                         each i in [1,2,3]
-                            div(data-event='click.popupOpen').news__item
+                            a(href="/news/article/").news__item
                                 .news__date 26 января 2023
                                 .news__img
                                     img(src="/images/content/news/"+i+".webp" alt="Открытие Tangiers Lounge Pokrovka")

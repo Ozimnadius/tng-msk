@@ -38,6 +38,10 @@ $break_xs: 575.98px;
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font2);
   }
+
+  &>*{
+    margin: 20px 0;
+  }
 }
 
 @mixin headers() {
