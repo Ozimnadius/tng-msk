@@ -15,6 +15,25 @@ function setCSSVariables() {
 
 function initSliders() {
 
+    const indexSliders = document.querySelectorAll('.index-slider');
+    indexSliders.forEach(i => {
+        new Swiper(i.querySelector('.swiper'), {
+            speed: 800,
+            spaceBetween: 20,
+            grabCursor: true,
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: '.index-slider__pag',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: i.querySelector('.index-slider__next'),
+                prevEl: i.querySelector('.index-slider__prev'),
+            }
+        });
+    });
+
     const interiorSliders = document.querySelectorAll('.index-interior__slider');
     interiorSliders.forEach(i => {
         new Swiper(i.querySelector('.swiper'), {
@@ -291,6 +310,10 @@ class Events {
             e.preventDefault();
             this.$menuCatalog.classList.add('active');
             disableScroll();
+        } else{
+
+            this.closeMenu(e, elem);
+            window.location = elem.href;
         }
     }
 
@@ -308,6 +331,11 @@ class Events {
     backMenuCatalog(e, elem) {
         let submenu = elem.closest('.menu-catalog__submenu');
         submenu.classList.remove('active');
+    }
+
+    restoplaceBtn(e, elem) {
+        e.preventDefault();
+        document.querySelector('#restoplace-btn').click()
     }
 
 }

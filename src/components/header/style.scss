@@ -69,8 +69,10 @@
   &__logo,
   &__name,
   &__tel,
-  &__map {
+  &__map,
+  &__call{
     position: relative;
+    z-index: 10;
 
     &:after {
       content: '';

@@ -13,7 +13,7 @@ block content
         section.contacts__top
             .grid
                 .grid__items
-                    +gridItems([4,20])
+                    +gridItems([4, 20])
                 .grid__content
                     .contacts__container.container
                         .contacts__title.ui-h2 Контакты
@@ -22,11 +22,27 @@ block content
                         .contacts__tel
                             a(href=GLOBALS.tel.href).ui-num1= GLOBALS.tel.val
                         .contacts__addr.ui-sub3= GLOBALS.addr
-                        a(href="#").contacts__btn.ui-btn-big ЗАБРОНИРОВАТЬ СТОЛИК
+                        .contacts__btns
+                            a(href='https://wa.me/79255900900').contacts__btn.ui-btn-big
+                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.253 4.26786C19.8006 1.824 16.5308 0.466309 13.0793 0.466309C5.90384 0.466309 0.090827 6.25914 0.090827 13.4097C0.090827 15.6725 0.726627 17.9353 1.81657 19.8361L0 26.5341L6.90296 24.7238C8.81036 25.7194 10.8994 26.2625 13.0793 26.2625C20.2547 26.2625 26.0678 20.4697 26.0678 13.3192C25.9769 9.97018 24.7053 6.71171 22.253 4.26786ZM19.3465 18.0258C19.074 18.7499 17.8024 19.474 17.1666 19.5646C16.6216 19.6551 15.895 19.6551 15.1683 19.474C14.7142 19.293 14.0784 19.112 13.3518 18.7499C10.082 17.3922 7.9929 14.1338 7.81125 13.8622C7.62959 13.6812 6.44882 12.1425 6.44882 10.5133C6.44882 8.88402 7.26627 8.15992 7.53876 7.79786C7.81124 7.43581 8.17456 7.43581 8.44704 7.43581C8.6287 7.43581 8.90118 7.43581 9.08284 7.43581C9.26449 7.43581 9.53698 7.3453 9.80947 7.97889C10.082 8.61248 10.7178 10.2417 10.8086 10.3322C10.8994 10.5133 10.8994 10.6943 10.8086 10.8753C10.7178 11.0563 10.6269 11.2374 10.4453 11.4184C10.2636 11.5994 10.082 11.871 9.99112 11.9615C9.80947 12.1425 9.62781 12.3235 9.80947 12.5951C9.99113 12.9571 10.6269 13.9527 11.626 14.8579C12.8976 15.944 13.8967 16.3061 14.2601 16.4871C14.6234 16.6681 14.805 16.5776 14.9867 16.3966C15.1683 16.2156 15.8041 15.4915 15.9858 15.1294C16.1675 14.7674 16.4399 14.8579 16.7124 14.9484C16.9849 15.0389 18.6198 15.8535 18.8923 16.0346C19.2556 16.2156 19.4373 16.3061 19.5281 16.3966C19.6189 16.6681 19.6189 17.3017 19.3465 18.0258Z" fill="currentColor"></path>
+                                </svg>
+                                | написать на вотсап
+                            a(href="#").contacts__btn.ui-btn-big ЗАБРОНИРОВАТЬ СТОЛИК
 
-        section.contacts__map
-            #map
-            button(type='button' data-event='click.templateOpen' data-name='how').contacts__how.ui-btn-fill как добраться
+        section.contacts__bottom
+            .contacts__left
+                .contacts__map
+                    #map
+            .contacts__right
+                .contacts__video
+                    .contacts-video
+                        .contacts-video__title Видео как добраться
+                        a(href="https://www.youtube.com/watch?v=ykJpigvTGQY" data-fancybox).contacts-video__link
+                            span.contacts-video__btn.ui-arrow-right
+                            img(src="/images/content/contacts/img.webp" alt="lorem")
+
+
 
 
 

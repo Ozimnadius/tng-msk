@@ -1,6 +1,6 @@
 .menu {
   position: fixed;
-  z-index: 101;
+  z-index: 100;
   background: rgba(var(--color-grey), 0.7);
   backdrop-filter: blur(20px);
   top: 0;
@@ -12,8 +12,9 @@
   transition: opacity var(--transition);
 
   &.active {
-    pointer-events: all;
     opacity: 1;
+    pointer-events: all;
+
   }
 
   &__header {
@@ -101,7 +102,7 @@
   &__item {
     font-size: 64px;
     line-height: 112.5%;
-    @include sm-block{
+    @include sm-block {
       font-size: 44px;
     }
   }
@@ -116,8 +117,8 @@
     @include lg-block {
       display: flex;
     }
-    @include sm-block{
-        gap: 20px;
+    @include sm-block {
+      gap: 20px;
     }
   }
 
@@ -142,14 +143,15 @@
 
   &__worktime {
     span {
-      &:nth-child(1){
-        @include sm-block{
+      &:nth-child(1) {
+        @include sm-block {
           display: none;
         }
       }
+
       &:nth-child(2) {
         display: none;
-        @include sm-block{
+        @include sm-block {
           display: block;
         }
       }
@@ -158,7 +160,9 @@
 
   &__close {
     cursor: pointer;
-    @include sm-block{
+    position: relative;
+    z-index: 3;
+    @include sm-block {
       position: absolute;
       top: 15px;
       right: 15px;
@@ -169,7 +173,7 @@
         width: 45px;
         height: 45px;
       }
-      @include sm-block{
+      @include sm-block {
         width: 24px;
         height: 24px;
       }
@@ -178,6 +182,7 @@
 
   &__bottom {
     position: absolute;
+    z-index: 2;
     bottom: 0;
     left: 0;
     right: 0;

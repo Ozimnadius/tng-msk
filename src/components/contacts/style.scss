@@ -25,7 +25,7 @@
       padding-top: 70px;
       padding-bottom: 90px;
     }
-    @include sm-block{
+    @include sm-block {
       padding-top: 45px;
       padding-bottom: 80px;
     }
@@ -39,33 +39,34 @@
     @include md-block {
       margin-bottom: 40px;
     }
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 30px;
     }
   }
 
   &__name {
-    font-size: 64px;
+    font-size: 44px;
     line-height: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     letter-spacing: 0.16em;
     text-align: center;
     @include md-block {
-      font-size: 48px;
-      margin-bottom: 34px;
+      font-size: 28px;
+      margin-bottom: 30px;
     }
   }
 
   &__time {
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     @include lg-block {
       font-size: 34px;
     }
     @include md-block {
       font-size: 24px;
+      margin-bottom: 10px;
     }
-    @include sm-block{
+    @include sm-block {
       max-width: 19ch;
       width: 100%;
       margin: 0 auto 20px;
@@ -74,17 +75,19 @@
 
   &__tel {
     text-align: center;
-    margin-bottom: 10px;
-    @include sm-block{
-      margin-bottom: 20px;
+    margin-bottom: 20px;
+    @include md-block {
+
+      margin-bottom: 10px;
     }
 
     a {
+      font-size: 48px;
       @include md-block {
-        font-size: 64px;
+        font-size: 34px;
       }
-      @include sm-block{
-        font-size: 40px;
+      @include sm-block {
+        font-size: 34px;
       }
     }
   }
@@ -99,7 +102,7 @@
       font-size: 24px;
       margin-bottom: 40px;
     }
-    @include sm-block{
+    @include sm-block {
       max-width: 22ch;
       width: 100%;
       margin: 0 auto 30px;
@@ -107,27 +110,45 @@
 
   }
 
+  &__btns {
+    display: flex;
+    gap: 20px;
+    @include md-block {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   &__btn {
     @include lg-block {
       font-size: 24px;
     }
-    @include md-block {
+    @include sm-block {
       font-size: 18px;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid var(--color-grey);
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    @include sm-block{
+        grid-template-columns: 100%;
     }
   }
 
   &__map {
     width: 100%;
-    height: 900px;
+    height: 950px;
     position: relative;
     @include lg-block {
-      height: 620px;
+      height: 730px;
     }
     @include md-block {
-      height: 470px;
+      height: 580px;
     }
-    @include sm-block{
-      height: 350px;
+    @include sm-block {
+      height: 560px;
     }
   }
 
@@ -145,6 +166,83 @@
       bottom: 50px;
       font-size: 18px;
     }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include sm-block{
+      order: -1;
+      padding: 50px 0;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background-color: var(--color-grey);
+    }
+  }
+}
+
+.contacts-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  @include lg-block {
+    gap: 40px;
+  }
+  @include md-block{
+      gap: 20px;
+  }
+
+  &__title {
+    font-family: var(--font2);
+    text-transform: uppercase;
+    font-size: 48px;
+    text-align: center;
+    @include lg-block {
+      font-size: 34px;
+    }
+    @include md-block{
+      font-size: 24px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    @include md-block{
+        --btnSize: 72px;
+    }
+
+    img {
+      @include lg-block {
+        width: 258px;
+      }
+      @include md-block{
+        width: 240px;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+      --arrowColor: var(--color-txt);
+      background-color: transparent;
+    }
+
   }
 }
 
@@ -176,11 +274,11 @@
       top: -152px;
     }
 
-    svg{
+    svg {
       width: 166px;
       height: 182px;
       display: block;
-      @include md-block{
+      @include md-block {
         width: 152px;
         height: 155px;
       }

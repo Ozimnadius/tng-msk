@@ -3,9 +3,17 @@
   margin: 0 -20px;
   border-top: 1px solid var(--color-grey);
 
-  &__item{
-    &.open{
-      .catalog-menu__arr svg{
+  @include lg-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+  }
+
+  &__item {
+    &.open {
+      .catalog-menu__arr svg {
         transform: rotate(-90deg);
       }
     }
@@ -20,8 +28,12 @@
     position: relative;
     border-bottom: 1px solid var(--color-grey);
     transition: color var(--transition);
+    @include lg-block {
+      font-size: 24px;
+      text-align: center;
+    }
 
-    &.active{
+    &.active {
       color: var(--color-white);
     }
 
@@ -44,10 +56,13 @@
     align-items: center;
     padding-left: 30px;
     cursor: pointer;
-    @include xlg-block{
+    @include xlg-block {
       width: 75px;
       padding-left: 0;
       justify-content: center;
+    }
+    @include lg-block {
+      display: none;
     }
 
     svg {
@@ -64,6 +79,9 @@
 
     &.open {
       display: block;
+      @include lg-block{
+        display: none;
+      }
     }
   }
 

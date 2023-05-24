@@ -1,0 +1,17 @@
+.index-slider
+    .index-slider__top
+        .index-slider__title.ui-h2 Интерьер
+        .index-slider__sub.ui-sub4 сочетает в себе английскую классику и гранж
+    .index-slider__bottom
+        .index-slider__nav
+            .index-slider__nav-item
+                button(type='button').index-slider__prev.ui-arrow-left
+            .index-slider__nav-item
+                button(type='button').index-slider__next.ui-arrow-right
+        .index-slider__pag
+        .index-slider__swiper.swiper
+            .swiper-wrapper
+                each i in [1,2,3,4,5]
+                    a(href="/images/content/index-interior/img-1.webp" data-fancybox='gallery').swiper-slide.index-slider__slide
+                        img(src="/images/content/index-interior/img-1.webp" alt="lorem")
+    a(href="/").index-slider__link.ui-btn-big Смотреть все фото

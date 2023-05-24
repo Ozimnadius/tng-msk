@@ -1,9 +1,6 @@
 .index-advantages{
   display:grid;
-  grid-template-columns: repeat(6,1fr);
-  @include lg-block{
-      grid-template-columns: repeat(3,1fr);
-  }
+  grid-template-columns: repeat(3,1fr);
   @include sm-block{
       grid-template-columns: 100%;
   }
@@ -18,13 +15,7 @@
       content: '';
       display: block;
       width: 100%;
-      padding-top: calc(150/236*100%);
-      @include lg-block{
-        padding-top: calc(150/345*100%);
-      }
-      @include sm-block{
-        padding-top: calc(100/375*100%);
-      }
+      padding-top: calc(227/640*100%);
     }
   }
 

@@ -5,15 +5,27 @@ block variables
 
 block content
     main.catalog
-        .catalog__left
-            .catalog__title.ui-h2 Меню
-            .catalog__menu
-                include ../src/components/catalog-menu/index
+        .catalog__top
+            .catalog__grid
+                .catalog__left
+                    .catalog__title.ui-h2 Меню
+                .catalog__right
+                    .catalog__container
+                        .catalog__title.ui-h2 АВТОРСКАЯ КУХНЯ
+        .catalog__bottom
+            .catalog__grid
+                .catalog__left
+                    .catalog__menu
+                        include ../src/components/catalog-menu/index
 
-        .catalog__right
-            .catalog__title.ui-h2 Завтраки
-            .catalog__item
-                include ../src/components/catalog-items/index
+                .catalog__right.border-top
+                    .catalog__sections
+                        .catalog__container
+                            include ../src/components/catalog-sections/index
+                    .catalog__container
+                        .catalog__sub.ui-h3 Завтраки
+                        .catalog__item
+                            include ../src/components/catalog-items/index
 
 
 

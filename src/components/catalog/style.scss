@@ -1,28 +1,39 @@
 .catalog {
 
-  display: grid;
-  grid-template-columns: 500px 1fr;
-  @include xlg-block {
-    grid-template-columns: 405px 1fr;
+  &__top {
+    .catalog__left {
+      @include sm-block {
+        display: none;
+      }
+    }
   }
-  @include lg-block {
-    grid-template-columns: 100%;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    @include xlg-block {
+      grid-template-columns: 405px 1fr;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+    }
   }
 
   &__title {
     margin-top: 110px;
     margin-bottom: 70px;
-    @include lg-block{
+    @include lg-block {
       font-size: 82px;
       margin-top: 90px;
+      text-align: center;
     }
-    @include md-block{
+    @include md-block {
       text-align: center;
       font-size: 56px;
       margin-top: 60px;
       margin-bottom: 50px;
     }
-    @include sm-block{
+    @include sm-block {
       margin-top: 40px;
       margin-bottom: 40px;
       font-size: 34px;
@@ -33,31 +44,54 @@
     border-right: 1px solid var(--color-grey);
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 250px;
-    @include xlg-block {
-      padding-bottom: 100px;
-    }
-    @include lg-block {
-      display: none;
-    }
   }
 
   &__right {
-    padding-left: 80px;
-    padding-right: 90px;
     margin-right: 100px;
     border-right: 1px solid var(--color-grey);
-    padding-bottom: 250px;
+    @include xlg-block {
+      margin-right: 0;
+      border-right: none;
+    }
+  }
+
+  &__sections {
+    border-bottom: 1px solid var(--color-grey);
+  }
+
+  &__container {
+    padding-left: 80px;
+    padding-right: 90px;
     @include xlg-block {
       padding-left: 20px;
       padding-right: 20px;
-      margin-right: 0;
-      border: none;
-      padding-bottom: 100px;
     }
-    @include sm-block{
+    @include sm-block {
       padding-left: 15px;
       padding-right: 15px;
+    }
+  }
+
+  &__sub {
+    margin-bottom: 60px;
+  }
+
+  &__bottom {
+    .catalog__left, .catalog__right {
+      padding-bottom: 200px;
+    }
+
+    .catalog__container {
+      padding-top: 145px;
+      @include xlg-block {
+        padding-top: 60px;
+      }
+    }
+
+    .catalog__left {
+      @include lg-block {
+        padding-bottom: 0;
+      }
     }
   }
 

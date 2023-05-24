@@ -1,0 +1,18 @@
+.photogallery {
+
+  .grid {
+    &__item {
+      @include sm-block {
+        &:nth-child(4),
+        &:nth-child(20) {
+          border-color: transparent;
+        }
+
+        &:nth-child(12) {
+          border-color: var(--color-grey);
+        }
+      }
+
+    }
+  }
+}

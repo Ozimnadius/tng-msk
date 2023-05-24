@@ -1,0 +1,12 @@
+.catalog-sections
+    .catalog-sections__grid
+        .catalog-sections__grid-item
+        .catalog-sections__grid-item
+        .catalog-sections__grid-item
+        .catalog-sections__grid-item
+    .catalog-sections__items
+        each i in ['Закуски','Закуски','Закуски','Закуски',]
+            a(href="#").catalog-sections__item
+                span.catalog-sections__img
+                    img(src="/images/content/catalog-sections/1.webp" alt="lorem")
+                span.catalog-sections__name= i

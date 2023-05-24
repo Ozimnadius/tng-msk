@@ -1,0 +1,97 @@
+.index-slider {
+  padding: 150px 0;
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include xlg-block {
+    margin: 0 60px;
+  }
+  @include lg-block {
+    margin: 0 20px;
+    padding: 100px 0;
+  }
+  @include md-block {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 80px 0;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    @include xlg-block {
+      margin-bottom: 30px;
+    }
+    @include lg-block {
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__sub {
+    margin-bottom: 45px;
+    @include lg-block {
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      max-width: 30ch;
+      width: 100%;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    margin-bottom: 60px;
+    width: 100%;
+    @include sm-block {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__swiper{
+    width: 100%;
+  }
+
+  &__nav {
+    position: absolute;
+    z-index: 3;
+    inset: 0 -46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  &__nav-item {
+    pointer-events: auto;
+  }
+
+  &__pag {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    @extend .ui-num3;
+
+    .swiper-pagination-current{
+      @extend .ui-num2;
+    }
+
+  }
+
+  &__slide{
+    display: block;
+  }
+
+}

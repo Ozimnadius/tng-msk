@@ -2,29 +2,45 @@
   width: 100%;
   max-width: 1870px;
   margin: 0 auto;
-  padding: 200px 60px;
+  padding: 90px 60px;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 150px;
+  &__name{
+    text-align: center;
+    margin-bottom: 100px;
+    @include xlg-block{
+      margin-bottom: 60px;
+    }
+  }
 
   @include xlg-block {
-    padding: 140px 45px;
+    padding: 90px 20px;
     gap: 70px;
   }
   @include lg-block {
-    padding: 100px 20px;
+    padding: 90px 0;
     gap: 20px;
   }
   @include md-block {
-    padding: 80px 20px;
-  }
-  @include sm-block {
-    padding: 70px 15px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    padding: 60px 0;
   }
 
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 150px;
+
+    @include xlg-block {
+      gap: 70px;
+    }
+    @include lg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 80px;
+      justify-items: center;
+    }
+  }
 
   &__item {
     --scale: 1;
