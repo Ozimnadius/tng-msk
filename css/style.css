@@ -2930,7 +2930,7 @@ h6 {
   display: none;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 1439.98px) {
   .catalog__top .catalog__left {
     display: none;
   }
@@ -2959,8 +2959,9 @@ h6 {
 }
 @media screen and (max-width: 1439.98px) {
   .catalog__title {
-    font-size: 82px;
-    margin-top: 90px;
+    font-size: 48px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     text-align: center;
   }
 }
@@ -3016,6 +3017,11 @@ h6 {
 .catalog__sub {
   margin-bottom: 60px;
 }
+@media screen and (max-width: 1439.98px) {
+  .catalog__sub {
+    margin-bottom: 30px;
+  }
+}
 .catalog__bottom .catalog__left, .catalog__bottom .catalog__right {
   padding-bottom: 200px;
 }
@@ -3025,6 +3031,11 @@ h6 {
 @media screen and (max-width: 1919.98px) {
   .catalog__bottom .catalog__container {
     padding-top: 60px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .catalog__bottom .catalog__container {
+    padding-top: 30px;
   }
 }
 @media screen and (max-width: 1439.98px) {
@@ -3259,6 +3270,33 @@ h6 {
 .catalog-sections {
   padding: 80px 0;
   position: relative;
+  margin-left: 80px;
+  margin-right: 90px;
+}
+@media screen and (max-width: 1919.98px) {
+  .catalog-sections {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .catalog-sections {
+    padding: 35px 0;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .catalog-sections {
+    margin-left: 55px;
+    margin-right: 55px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .catalog-sections {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 .catalog-sections__grid {
   display: -ms-grid;
@@ -3316,6 +3354,11 @@ h6 {
 @media screen and (max-width: 1919.98px) {
   .catalog-sections__items {
     gap: 20px 30px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .catalog-sections__items {
+    gap: 30px 75px;
   }
 }
 @media screen and (max-width: 1023.98px) {
@@ -3379,6 +3422,11 @@ h6 {
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (max-width: 1439.98px) {
+  .catalog-sections__name {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .catalog-sections__name {

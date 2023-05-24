@@ -2,7 +2,7 @@
 
   &__top {
     .catalog__left {
-      @include sm-block {
+      @include lg-block {
         display: none;
       }
     }
@@ -23,8 +23,9 @@
     margin-top: 110px;
     margin-bottom: 70px;
     @include lg-block {
-      font-size: 82px;
-      margin-top: 90px;
+      font-size: 48px;
+      margin-top: 40px;
+      margin-bottom: 40px;
       text-align: center;
     }
     @include md-block {
@@ -74,6 +75,9 @@
 
   &__sub {
     margin-bottom: 60px;
+    @include lg-block{
+      margin-bottom: 30px;
+    }
   }
 
   &__bottom {
@@ -85,6 +89,9 @@
       padding-top: 145px;
       @include xlg-block {
         padding-top: 60px;
+      }
+      @include lg-block{
+        padding-top: 30px;
       }
     }
 
