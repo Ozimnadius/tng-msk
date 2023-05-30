@@ -43,6 +43,13 @@
     text-align: center;
   }
 
+  &__date{
+    font-size: 24px;
+    @include sm-block{
+      font-size: 16px;
+    }
+  }
+
   &__content {
     width: 100%;
   }

@@ -1,0 +1,30 @@
+.special-card
+    .special-card__title При использовании карты с каждого заказа вам начисляются бонусы, которыми можно оплатить до 50% от счета
+    .special-card__course 1 рубль = 1 бонус
+    .special-card__grid
+        .special-card__left
+            -
+                var ul = [
+                    {
+                        percent: '5%',
+                        name: 'от чека при оформлении'
+                    },
+                    {
+                        percent: '7%',
+                        name: 'при сумме всех оплат 40 000 ₽'
+                    },
+                    {
+                        percent: '10%',
+                        name: 'при сумме всех оплат 80 000 ₽'
+                    }
+                ];
+            ul.special-card__ul
+                each i in ul
+                    li.special-card__li
+                        .special-card__percent= i.percent
+                        .special-card__name= i.name
+        .special-card__right
+            .special-card__img
+                .special-card__blur
+                    img(src="/images/content/special-card/blur.webp" alt="lorem")
+                img(src="/images/content/special-card/img.webp" alt="lorem")

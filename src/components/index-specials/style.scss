@@ -81,23 +81,17 @@
 
   &__img {
     width: 100%;
-    max-width: 620px;
+    max-width: 320px;
     border-radius: 50%;
     border: 2px solid var(--color-grey);
     overflow: hidden;
     margin-bottom: 50px;
-    @include xlg-block {
-      max-width: 540px;
-    }
-    @include lg-block {
-      max-width: 430px;
-    }
     @include md-block {
-      max-width: 320px;
+      max-width: 280px;
       margin-bottom: 35px;
     }
     @include sm-block {
-      width: 310px;
+      max-width: 250px;
     }
   }
 

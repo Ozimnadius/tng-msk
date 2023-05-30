@@ -2222,31 +2222,21 @@ h6 {
 }
 .index-specials__img {
   width: 100%;
-  max-width: 620px;
+  max-width: 320px;
   border-radius: 50%;
   border: 2px solid var(--color-grey);
   overflow: hidden;
   margin-bottom: 50px;
 }
-@media screen and (max-width: 1919.98px) {
-  .index-specials__img {
-    max-width: 540px;
-  }
-}
-@media screen and (max-width: 1439.98px) {
-  .index-specials__img {
-    max-width: 430px;
-  }
-}
 @media screen and (max-width: 1023.98px) {
   .index-specials__img {
-    max-width: 320px;
+    max-width: 280px;
     margin-bottom: 35px;
   }
 }
 @media screen and (max-width: 767.98px) {
   .index-specials__img {
-    width: 310px;
+    max-width: 250px;
   }
 }
 .index-specials__name {
@@ -3476,7 +3466,6 @@ h6 {
 }
 @media screen and (max-width: 1439.98px) {
   .news__title {
-    font-size: 82px;
     margin-bottom: 50px;
   }
 }
@@ -3796,6 +3785,14 @@ h6 {
 }
 .article__title {
   text-align: center;
+}
+.article__date {
+  font-size: 24px;
+}
+@media screen and (max-width: 767.98px) {
+  .article__date {
+    font-size: 16px;
+  }
 }
 .article__content {
   width: 100%;
@@ -4865,6 +4862,57 @@ h6 {
   .special__sub2 {
     font-size: 16px;
   }
+}
+
+.special-card {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+.special-card__title {
+  text-align: center;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.special-card__course {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+.special-card__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.special-card__ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 40px;
+}
+.special-card__percent {
+  font-family: var(--font2);
+  font-size: 60px;
+  line-height: 1;
+}
+.special-card__name {
+  font-size: 20px;
+}
+.special-card__img {
+  position: relative;
+}
+.special-card__img img {
+  position: relative;
+  z-index: 1;
+}
+.special-card__blur {
+  position: absolute;
+  left: -10px;
+  bottom: 15px;
+  -webkit-filter: blur(160px);
+          filter: blur(160px);
 }
 
 @media screen and (max-width: 767.98px) {
