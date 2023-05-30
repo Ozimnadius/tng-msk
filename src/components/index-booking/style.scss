@@ -1,11 +1,9 @@
 .index-booking {
-  padding-top: 245px;
-  padding-bottom: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative;
   text-align: center;
-  @include xlg-block {
-    padding: 200px 0;
-  }
+
   @include lg-block {
     padding: 130px 0;
   }

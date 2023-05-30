@@ -121,7 +121,7 @@
       grid-template-areas: 'copy copy policy policy socials socials';
     }
     @include lg-block {
-      grid-template-areas: 'copy copy policy policy policy policy';
+      grid-template-areas: 'copy copy policy policy socials socials';
     }
     @include md-block {
       grid-template-areas: 'copy copy copy policy policy policy';
@@ -147,6 +147,12 @@
   &__policy {
     text-align: right;
     grid-area: policy;
+    @include lg-block {
+      text-align: center;
+    }
+    @include md-block {
+      text-align: right;
+    }
     @include sm-block {
       text-align: center;
     }
@@ -162,7 +168,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 30px;
-    @include lg-block {
+    @include md-block {
       display: none;
     }
 
@@ -173,11 +179,13 @@
       gap: 10px;
       @include lg-block {
         font-size: 20px;
+        gap: 5px;
       }
 
-      svg{
+      svg {
         flex-shrink: 0;
-        path{
+
+        path {
           fill: currentColor;
         }
       }

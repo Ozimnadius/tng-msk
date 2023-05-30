@@ -2219,6 +2219,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 .index-specials__img {
   width: 100%;
@@ -2428,15 +2429,10 @@ h6 {
 }
 
 .index-booking {
-  padding-top: 245px;
-  padding-bottom: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative;
   text-align: center;
-}
-@media screen and (max-width: 1919.98px) {
-  .index-booking {
-    padding: 200px 0;
-  }
 }
 @media screen and (max-width: 1439.98px) {
   .index-booking {
@@ -4887,6 +4883,12 @@ h6 {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+@media screen and (max-width: 1023.98px) {
+  .special-card__grid {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+  }
+}
 .special-card__ul {
   display: -ms-grid;
   display: grid;
@@ -5187,7 +5189,7 @@ h6 {
 }
 @media screen and (max-width: 1439.98px) {
   .footer__bottom {
-        grid-template-areas: "copy copy policy policy policy policy";
+        grid-template-areas: "copy copy policy policy socials socials";
   }
 }
 @media screen and (max-width: 1023.98px) {
@@ -5225,6 +5227,16 @@ h6 {
   -ms-grid-column: 7;
   text-align: right;
   grid-area: policy;
+}
+@media screen and (max-width: 1439.98px) {
+  .footer__policy {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .footer__policy {
+    text-align: right;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .footer__policy {
@@ -5274,7 +5286,12 @@ h6 {
   .footer__policy {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 2;
+  }
+  .footer__socials {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
   }
 }
 @media screen and (max-width: 1023.98px) {
@@ -5301,7 +5318,7 @@ h6 {
     -ms-grid-column-span: 1;
   }
 }
-@media screen and (max-width: 1439.98px) {
+@media screen and (max-width: 1023.98px) {
   .footer__socials {
     display: none;
   }
@@ -5319,6 +5336,7 @@ h6 {
 @media screen and (max-width: 1439.98px) {
   .footer__socials a {
     font-size: 20px;
+    gap: 5px;
   }
 }
 .footer__socials a svg {
