@@ -122,7 +122,7 @@ function initMap() {
                                                                             </svg>
                                                                             <div class="placemark__txt">
                                                                              ул. Покровка <br>
-                                                                            <b>д. 31 стр. 4</b>
+                                                                            д. 31 стр. 4
                                                                             </div>
                                                                         </div>
                                                                     </div>`);

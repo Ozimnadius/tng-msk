@@ -3,11 +3,20 @@
   width: 100%;
   margin: 0 auto;
 
+  &--800{
+    max-width: 800px;
+  }
+
   &__title{
     text-align: center;
     font-size: 26px;
     text-transform: uppercase;
     margin-bottom: 20px;
+  }
+
+  &__sub{
+    font-size: 32px;
+    margin-bottom: 35px;
   }
 
   &__course{
@@ -28,6 +37,52 @@
   &__ul{
     display:grid;
     gap: 40px;
+  }
+
+  &__ul2{
+    display:grid;
+    gap: 30px;
+    counter-reset: li;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      width: 1px;
+      position: absolute;
+      left: 21.5px;
+      top: 0;
+      bottom: 0;
+      background-color: var(--color-grey);
+    }
+
+    li{
+      font-size: 20px;
+      text-transform: uppercase;
+      padding-left: 78px;
+      position: relative;
+
+      &:before{
+        counter-increment: li;
+        content: counter(li);
+
+        position: absolute;
+        top: -7px;
+        left: 0;
+        width: 43px;
+        height: 43px;
+        border: 1px solid var(--color-grey);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 26px;
+        line-height: 1;
+        background-color: var(--color-black-light);
+      }
+    }
   }
 
   &__percent{

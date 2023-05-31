@@ -28,3 +28,32 @@
                 .special-card__blur
                     img(src="/images/content/special-card/blur.webp" alt="lorem")
                 img(src="/images/content/special-card/img.webp" alt="lorem")
+.special-card.special-card--800
+    .special-card__sub Как стать участником клуба Tangiers Lounge Pokrovka
+    .special-card__grid
+        .special-card__left
+            -
+                var ul = [
+                    {
+                        name: 'Нажмите кнопку «Получить бонусы»'
+                    },
+                    {
+                        name: 'Введите номер телефона и подтвердите его с помощью кода из СМС'
+                    },
+                    {
+                        name: 'Заполните анкету'
+                    },
+                    {
+                        name: 'Добавьте карту друга Мистера Т. Apple Wallet (IOS) или Wallet Passes (Android)'
+                    },
+
+                ];
+            ul.special-card__ul2
+                each i in ul
+                    li= i.name
+            a(href="https://cards.premiumbonus.su/SM/login").special__link.ui-btn-big Оформить карту
+        .special-card__right
+            .special-card__img
+                .special-card__blur
+                    img(src="/images/content/special-card/blur.webp" alt="lorem")
+                img(src="/images/content/special-card/img.webp" alt="lorem")

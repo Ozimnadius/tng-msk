@@ -34,7 +34,7 @@
   }
 
   &__img {
-    max-width: 542px;
+    max-width: 320px;
     width: 100%;
     position: relative;
     border-radius: 50%;
@@ -42,6 +42,10 @@
     overflow: hidden;
     margin: 0 auto 55px;
     @include md-block {
+      max-width: 280px;
+    }
+    @include md-block {
+      max-width: 250px;
       margin-bottom: 30px;
     }
 
@@ -91,11 +95,13 @@
   &__title2 {
     text-align: center;
     font-family: var(--font2);
-    font-size: 56px;
+    font-size: 48px;
     line-height: 100%;
     text-transform: uppercase;
-
-    margin-bottom: 26px;
+    margin-bottom: 20px;
+    @include lg-block{
+      font-size: 34px;
+    }
     @include md-block {
       font-size: 28px;
       margin-bottom: 20px;

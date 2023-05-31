@@ -10,7 +10,7 @@
     margin: 0 60px;
   }
   @include lg-block {
-    margin: 0 20px;
+    margin: 0 40px;
     padding: 100px 0;
   }
   @include md-block {
@@ -65,6 +65,9 @@
     align-items: center;
     justify-content: space-between;
     pointer-events: none;
+    @include lg-block{
+        inset: 0 -25px;
+    }
   }
 
   &__nav-item {
