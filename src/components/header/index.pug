@@ -2,15 +2,22 @@ header.header
     .header__logo
         a(href="/")
             img(src="/images/content/logo.svg" alt="lorem")
-    .header__name POKROVKA
+    //.header__name POKROVKA
+    .header__tg
+        a(href="#")
+            img(src="/images/content/tg.svg" alt="lorem")
     .header__addr
         a(href="/contacts/").ui-link2 Москва, ул. Покровка, д.31 стр.4
+    .header__menu
+        a(href="#") Контакты
+        a(href="#") События
+        a(href="#") Фотогалерея
     .header__btn-menu
         button(type='button' data-event='click.openMenu')
     .header__tel
         a(href=GLOBALS.tel.href)= GLOBALS.tel.val
-    .header__map
-        a(href="/contacts/") как добраться
+    //.header__map
+    //    a(href="/contacts/") как добраться
     .header__call
         a(href="#" data-event="click.restoplaceBtn") забронировать онлайн
 

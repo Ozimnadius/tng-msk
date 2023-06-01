@@ -578,6 +578,7 @@ h6 {
 }
 
 .header {
+  --padding: 20px;
   padding: 16px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -591,6 +592,11 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
+}
+@media screen and (max-width: 1023.98px) {
+  .header {
+    --padding: 10px;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .header {
@@ -611,7 +617,7 @@ h6 {
 .header > * {
   line-height: 110%;
   text-transform: uppercase;
-  padding: 0 20px;
+  padding: 0 var(--padding);
   min-height: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -633,11 +639,11 @@ h6 {
 .header > * a:hover, .header > * button:hover {
   color: var(--color-white);
 }
-.header__logo, .header__name, .header__tel, .header__map, .header__call {
+.header__logo, .header__name, .header__tg, .header__tel, .header__map, .header__call {
   position: relative;
   z-index: 10;
 }
-.header__logo:after, .header__name:after, .header__tel:after, .header__map:after, .header__call:after {
+.header__logo:after, .header__name:after, .header__tg:after, .header__tel:after, .header__map:after, .header__call:after {
   content: "";
   display: block;
   position: absolute;
@@ -648,7 +654,7 @@ h6 {
   background-color: var(--color-grey);
 }
 @media screen and (max-width: 767.98px) {
-  .header__logo:after, .header__name:after, .header__tel:after, .header__map:after, .header__call:after {
+  .header__logo:after, .header__name:after, .header__tg:after, .header__tel:after, .header__map:after, .header__call:after {
     display: none;
   }
 }
@@ -657,18 +663,18 @@ h6 {
       -ms-flex-order: 1;
           order: 1;
 }
-.header__name {
+.header__name, .header__tg {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
 @media screen and (max-width: 767.98px) {
-  .header__name {
+  .header__name, .header__tg {
     display: none;
   }
 }
-@media screen and (max-width: 1023.98px) {
-  .header__name:after {
+@media screen and (max-width: 767.98px) {
+  .header__name:after, .header__tg:after {
     display: none;
   }
 }
@@ -686,11 +692,55 @@ h6 {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
-  margin: 0 auto;
+  position: absolute;
+  inset: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+}
+@media screen and (max-width: 1439.98px) {
+  .header__menu {
+    position: static;
+    pointer-events: initial;
+  }
+}
+.header__menu a {
+  min-height: 34px;
+  pointer-events: all;
+  padding: 0 var(--padding);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__menu a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  background-color: var(--color-grey);
+}
+@media screen and (max-width: 767.98px) {
+  .header__menu a:after {
+    display: none;
+  }
+}
+.header__menu a:last-child:after {
+  display: none;
 }
 @media (max-width: 767.98px) {
   .header__menu {
@@ -746,6 +796,7 @@ h6 {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
+  margin-left: auto;
 }
 @media screen and (max-width: 1023.98px) {
   .header__tel {
@@ -778,6 +829,11 @@ h6 {
   -webkit-box-ordinal-group: 8;
       -ms-flex-order: 7;
           order: 7;
+}
+@media screen and (max-width: 1023.98px) {
+  .header__call {
+    margin-left: auto;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .header__call {
@@ -4460,19 +4516,10 @@ h6 {
   padding: 90px 20px;
   width: 100%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 30px;
 }
 @media screen and (max-width: 1023.98px) {
   .popup .content {
     padding: 50px 15px;
-    gap: 20px;
   }
 }
 
@@ -4860,6 +4907,9 @@ h6 {
      -moz-columns: 2;
           columns: 2;
   gap: 20px;
+}
+.special__content .content {
+  padding: 0;
 }
 .special__title2 {
   text-align: center;

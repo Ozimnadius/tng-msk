@@ -1,4 +1,6 @@
 .header {
+  --padding: 20px;
+
   padding: 16px 0;
   display: flex;
   background: rgba(0, 0, 0, 0.03);
@@ -9,7 +11,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  @include sm-block{
+  @include md-block{
+    --padding: 10px;
+  }
+  @include sm-block {
     padding: 10px 0;
   }
 
@@ -29,7 +34,7 @@
   %item {
     line-height: 110%;
     text-transform: uppercase;
-    padding: 0 20px;
+    padding: 0 var(--padding);
     min-height: 34px;
     display: flex;
     align-items: center;
@@ -68,9 +73,10 @@
 
   &__logo,
   &__name,
+  &__tg,
   &__tel,
   &__map,
-  &__call{
+  &__call {
     position: relative;
     z-index: 10;
 
@@ -93,14 +99,15 @@
     order: 1;
   }
 
-  &__name {
+  &__name,
+  &__tg {
     order: 2;
     @include sm-block {
       display: none;
     }
 
     &:after {
-      @include md-block {
+      @include sm-block {
         display: none;
       }
     }
@@ -113,13 +120,51 @@
     }
   }
 
-  &__menu{
+  &__menu {
     order: 4;
-    margin: 0 auto;
+    position: absolute;
+    inset: 0;
+    padding: 0;
 
     display: flex;
-    gap: 15px;
-    @media (max-width: 767.98px){
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    @include lg-block {
+      position: static;
+      pointer-events: initial;
+    }
+
+    a {
+      min-height: 34px;
+      pointer-events: all;
+      padding: 0 var(--padding);
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 2px;
+        background-color: var(--color-grey);
+        @include sm-block {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 767.98px) {
       display: none;
     }
   }
@@ -129,7 +174,7 @@
     margin: 0 auto;
     order: 4;
     display: none;
-    @include sm-block{
+    @include sm-block {
       display: block;
       margin-right: 0;
     }
@@ -140,8 +185,8 @@
       justify-content: center;
       gap: 8px;
       min-height: 100%;
-      @include sm-block{
-          gap: 4px;
+      @include sm-block {
+        gap: 4px;
       }
 
       &:before, &:after {
@@ -150,7 +195,7 @@
         width: 45px;
         height: 2px;
         background-color: var(--color-txt);
-        @include sm-block{
+        @include sm-block {
           width: 24px;
         }
       }
@@ -159,6 +204,7 @@
 
   &__tel {
     order: 5;
+    margin-left: auto;
     @include md-block {
       display: none;
     }
@@ -182,6 +228,9 @@
 
   &__call {
     order: 7;
+    @include md-block{
+      margin-left: auto;
+    }
     @include sm-block {
       display: none;
     }
